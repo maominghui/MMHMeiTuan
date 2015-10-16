@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921B8B5B1BD0F46900DFFFDD /* UITableView+MMHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8B5A1BD0F46900DFFFDD /* UITableView+MMHTableView.m */; settings = {ASSET_TAGS = (); }; };
 		92D871A81BCE35CB009D6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871A71BCE35CB009D6A1C /* main.m */; };
 		92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AA1BCE35CC009D6A1C /* AppDelegate.m */; };
 		92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AC1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld */; };
@@ -1393,6 +1394,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921B8B591BD0F46900DFFFDD /* UITableView+MMHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+MMHTableView.h"; sourceTree = "<group>"; };
+		921B8B5A1BD0F46900DFFFDD /* UITableView+MMHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MMHTableView.m"; sourceTree = "<group>"; };
 		92D871A21BCE35CB009D6A1C /* MMHMeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHMeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D871A61BCE35CB009D6A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D871A71BCE35CB009D6A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -3100,6 +3103,8 @@
 		92D871D91BCE373E009D6A1C /* 分类 */ = {
 			isa = PBXGroup;
 			children = (
+				921B8B591BD0F46900DFFFDD /* UITableView+MMHTableView.h */,
+				921B8B5A1BD0F46900DFFFDD /* UITableView+MMHTableView.m */,
 			);
 			name = "分类";
 			sourceTree = "<group>";
@@ -6766,6 +6771,7 @@
 				92F5FD171BD09B4C00F6E656 /* AFNetworkReachabilityManager.m in Sources */,
 				92F5FD271BD09B4C00F6E656 /* SDWebImageCompat.m in Sources */,
 				92F5FD241BD09B4C00F6E656 /* NSString+MJExtension.m in Sources */,
+				921B8B5B1BD0F46900DFFFDD /* UITableView+MMHTableView.m in Sources */,
 				92F5FD301BD09B4C00F6E656 /* UIImageView+HighlightedWebCache.m in Sources */,
 				92F5FD1A1BD09B4C00F6E656 /* AFURLRequestSerialization.m in Sources */,
 				92D872131BCE3B57009D6A1C /* MJRefreshBackGifFooter.m in Sources */,

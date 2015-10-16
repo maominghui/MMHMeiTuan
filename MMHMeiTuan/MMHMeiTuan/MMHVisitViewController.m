@@ -39,5 +39,9 @@
     _homeServiceArray = [NSMutableArray array];
 }
 
+-(void)initVisitTableView{
+    self.visitTableView = [UITableView initWithTableView:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-64) withDelegate:self];
+    [self.view addSubview:self.visitTableView];
+}
 
 @end

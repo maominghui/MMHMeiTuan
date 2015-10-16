@@ -49,7 +49,7 @@
 #import "AFNetworking.h"
 //#import "BMapKit.h"
 //#import "UIBarButtonItem+JFBarButtonItem.h"
-//#import "UITableView+JFTableView.h"
+#import "UITableView+MMHTableView.h"
 
 
 #endif
