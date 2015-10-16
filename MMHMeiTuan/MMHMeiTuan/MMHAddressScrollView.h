@@ -10,7 +10,7 @@
 
 @protocol MMHAddressScrollViewButtonDelegate <NSObject>
 @optional
--(void)aresButtonClick:(UIButton *)button;
+-(void)areaButtonClick:(UIButton *)button;
 @end
 
 @protocol MMHChangeCityButtonDelegate <NSObject>

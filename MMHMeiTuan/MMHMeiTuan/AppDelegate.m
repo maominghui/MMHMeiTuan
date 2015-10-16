@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MMHTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window.rootViewController = [[MMHTabBarViewController alloc]init];
+    
     return YES;
 }
 

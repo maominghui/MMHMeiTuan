@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class MMHAddressScrollView;
+@protocol MMHSelectAddressViewTapDelegate <NSObject>
+@optional
+-(void)removeMaskView;
+
+@end
+
+
 @interface MMHSelectAddressView : UIView
+@property(nonatomic, strong)MMHAddressScrollView *addressScrollView;
+@property(nonatomic, weak)id<MMHSelectAddressViewTapDelegate>delegate;
 
 @end
