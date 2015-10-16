@@ -44,4 +44,11 @@
     [self.view addSubview:self.visitTableView];
 }
 
+#pragma mark - 设置下拉刷新
+-(void)setRefreshInVisitTableView{
+    //添加下拉的动画图片
+    //设置下拉刷新回调
+
+}
+
 @end

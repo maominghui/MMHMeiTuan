@@ -100,9 +100,21 @@
     
 }
 
+/*
+ * 在刷新数据里面请求 并用GCD开辟另一个线程
+ */
+#pragma mark - 这个请求数据在 刷新的适合请求
+-(void)refreshData{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //1.加载抢购数据
+        
+    });
+}
 
-
-
-
+//1.加载抢购数据
+#pragma mark - 加载抢购数据
+-(void)laodRushBuyData{
+   
+}
 
 @end
