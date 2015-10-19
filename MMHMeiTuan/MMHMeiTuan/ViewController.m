@@ -38,13 +38,7 @@
     //加载城市数据
     [self laodCityData];
 }
-#pragma mark -MMHAddressScrollViewButtonDelegate
--(void)areaButtonClick:(UIButton *)button{
-    JFLog(@"%@", button.currentTitle);
-    [self.leftButton setTitle:button.currentTitle forState:UIControlStateNormal];
-    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
-    
-}
+
 -(void)initData{
     //注意一定要给数组初始化，养成习惯少走弯路
     self.menuArray = [GetPlistArray arrayWithString:@"menuData.plist"];
@@ -114,6 +108,23 @@
 -(void)btn_leftBtnClick:(UIButton *)button{
     button.selected = !button.selected;
     self.selectAddressView.hidden = !self.selectAddressView.hidden;
+}
+#pragma mark - MMHSelectAddressViewTapDelegate
+-(void)removeMaskView{
+    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
+    
+}
+#pragma mark -MMHAddressScrollViewButtonDelegate
+-(void)areaButtonClick:(UIButton *)button{
+    JFLog(@"%@", button.currentTitle);
+    [self.leftButton setTitle:button.currentTitle forState:UIControlStateNormal];
+    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
+    
+}
+#pragma mark - MMHChangeCityButtonDelegate
+-(void)changeCityButtonClick:(UIButton *)button{
+    self.selectAddressView.hidden = !self.selectAddressView.hidden;
+    
 }
 /*
  * 在刷新数据里面请求 并用GCD开辟另一个线程
