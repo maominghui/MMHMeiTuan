@@ -16,4 +16,10 @@
 /**
  *  抢购URL
  */
+-(NSString *)urlWithRushBuy;
+/**
+ *  热门排队的URL
+ */
+-(NSString *)urlWithHotQueue;
+
 @end

@@ -8,10 +8,12 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "MMHHomeMenuCell.h"
+
 #import "MMHSelectAddressView.h"
 #import "MMHAddressScrollView.h"
 
-@interface ViewController()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHHomeMenuCellDelegate>
 
 @property(nonatomic, strong)UITableView *firstTableView;
 @property(nonatomic, strong)NSArray *menuArray;
@@ -100,6 +102,19 @@
     
 }
 
+#pragma mark - 设置tableView
+-(void)setUpTableView{
+    self.firstTableView = [UITableView initWithTableView:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-64) withDelegate:self];
+    self.firstTableView.backgroundColor = [UIColor clearColor]
+    ;
+    [self.view addSubview:self.firstTableView];
+}
+
+#pragma mark - 左边按钮
+-(void)btn_leftBtnClick:(UIButton *)button{
+    button.selected = !button.selected;
+    self.selectAddressView.hidden = !self.selectAddressView.hidden;
+}
 /*
  * 在刷新数据里面请求 并用GCD开辟另一个线程
  */

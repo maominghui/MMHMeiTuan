@@ -23,6 +23,8 @@
     JFLog(@"%@", areaArray);
     //允许scrollView竖直移动
     self.scrollView.alwaysBounceHorizontal = YES;
+    //禁止左右移动
+    self.scrollView.alwaysBounceHorizontal = NO;
     //允许scrollView的可移动内容
     self.scrollView.contentSize = CGSizeMake(SCREENWIDTH, SCREENHEIGHT - 150);
 
