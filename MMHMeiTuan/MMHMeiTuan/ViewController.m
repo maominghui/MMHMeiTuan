@@ -140,7 +140,15 @@
 //1.加载抢购数据
 #pragma mark - 加载抢购数据
 -(void)laodRushBuyData{
-   
+    NSString *urlStr = [[GetUrlString sharedManager]urlWithRushBuy];
+    [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
+        NSDictionary *dataDic = [responseBody objectForKey:@"data"];
+        //这个地方用MJ字典转换模型的框架
+        
+    } failure:^(NSError *error) {
+        JFLog(@"%@", error);
+        [self.firstTableView.header endRefreshing];
+    }];
 }
 
 @end

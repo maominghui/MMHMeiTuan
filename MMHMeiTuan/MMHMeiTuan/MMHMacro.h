@@ -39,8 +39,8 @@
 #define JFSearchHistoryPath [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"hisDatas.data"]
 
 
-//#import "NetWork.h"
-//#import "GetUrlString.h"
+#import "NetWork.h"
+#import "GetUrlString.h"
 #import "MJRefresh.h"
 #import "MJExtension.h"
 #import "GetPlistArray.h"
