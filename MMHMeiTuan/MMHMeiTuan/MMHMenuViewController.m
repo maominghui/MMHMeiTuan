@@ -25,7 +25,8 @@
 }
 
 -(void)initNav{
-
+    self.title = self.titleStr;
+    //UIBarButtonItem *leftItem = [UIBarButtonItem initWithNormalImage]
 }
 
 /*

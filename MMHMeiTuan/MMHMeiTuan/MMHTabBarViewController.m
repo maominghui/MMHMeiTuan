@@ -32,16 +32,16 @@
     
 }
 
-////取出系统自带的tabbar并把里面的按钮删除掉
-//-(void)viewDidAppear:(BOOL)animated
-//{
-//    [super viewDidAppear:YES];
-//    for (UIView * child in self.tabBar.subviews ) {
-//        if ([child isKindOfClass:[UIControl class]]) {
-//            [child removeFromSuperview];
-//        }
-//    }
-//}
+//取出系统自带的tabbar并把里面的按钮删除掉
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    for (UIView * child in self.tabBar.subviews ) {
+        if ([child isKindOfClass:[UIControl class]]) {
+            [child removeFromSuperview];
+        }
+    }
+}
 
 -(void)setUpTabBar{
     MMHTabBar *customTabBar = [[MMHTabBar alloc]init];
