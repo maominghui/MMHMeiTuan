@@ -26,7 +26,13 @@
 
 -(void)initNav{
     self.title = self.titleStr;
-    //UIBarButtonItem *leftItem = [UIBarButtonItem initWithNormalImage]
+    UIBarButtonItem *leftItem = [UIBarButtonItem initWithNormalImage:@"back" target:self action:@selector(OnBackBtn) width:23 height:23];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+}
+-(void)OnBackBtn{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 /*
