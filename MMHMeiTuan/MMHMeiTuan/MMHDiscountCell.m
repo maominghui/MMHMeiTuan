@@ -19,5 +19,17 @@
 
     // Configure the view for the selected state
 }
++(instancetype)cellWithTableView:(UITableView *)tableView{
+    static NSString *cellIndentifier = @"nomorecell";
+    MMHDiscountCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+    if (cell == nil) {
+        cell = [[MMHDiscountCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+    
+}
 
+//reuseIdentifier重用标示符
 @end

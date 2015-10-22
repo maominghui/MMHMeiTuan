@@ -10,8 +10,10 @@
 #import "ViewController.h"
 #import "MMHHomeMenuCell.h"
 
+
 #import "MMHSelectAddressView.h"
 #import "MMHAddressScrollView.h"
+#import "MMHRushDataModel.h"
 
 @interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHHomeMenuCellDelegate>
 
@@ -133,7 +135,7 @@
 -(void)refreshData{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //1.加载抢购数据
-        
+        [self laodRushBuyData];
     });
 }
 
@@ -151,4 +153,25 @@
     }];
 }
 
+#pragma mark - tableView的数据源方法，和代理方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 4) {
+        return _recommentArray.count +1;
+    }
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 5;
+}
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.section == 0) {
+//        MMHHomeMenuCell *cell = [MMHHomeMenuCell cellWithTableView:tableView menuArray:self.menuArray];
+//        cell.delegate = self;
+//        return cell;
+//        
+//    }
+//    
+//}
 @end
