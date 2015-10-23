@@ -14,6 +14,7 @@
 #import "MMHSelectAddressView.h"
 #import "MMHAddressScrollView.h"
 #import "MMHRushDataModel.h"
+#import "MMHRushDealsModel.h"
 
 @interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHHomeMenuCellDelegate>
 
@@ -146,7 +147,13 @@
     [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
         NSDictionary *dataDic = [responseBody objectForKey:@"data"];
         //这个地方用MJ字典转换模型的框架
-        
+        MMHRushDataModel *rushDataM = [MMHRushDataModel objectWithKeyValues:dataDic];
+        [_rushArray removeAllObjects];
+        for (int i = 0; i < rushDataM.deals.count; i++) {
+            MMHRushDealsModel *deals = [MMHRushDealsModel objectWithKeyValues:rushDataM.deals[i]];
+            [_rushArray addObject:deals];
+        }
+        [self.firstTableView reloadData];
     } failure:^(NSError *error) {
         JFLog(@"%@", error);
         [self.firstTableView.header endRefreshing];

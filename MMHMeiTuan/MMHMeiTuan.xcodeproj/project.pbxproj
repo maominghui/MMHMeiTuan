@@ -33,6 +33,7 @@
 		921B8B991BD8CFCB00DFFFDD /* MMHShopDatailDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8B981BD8CFCB00DFFFDD /* MMHShopDatailDataModel.m */; settings = {ASSET_TAGS = (); }; };
 		921B8B9C1BD8CFE600DFFFDD /* MMHShopRecommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8B9B1BD8CFE600DFFFDD /* MMHShopRecommentModel.m */; settings = {ASSET_TAGS = (); }; };
 		921B8B9F1BD8D09E00DFFFDD /* MMHDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8B9E1BD8D09E00DFFFDD /* MMHDiscountCell.m */; settings = {ASSET_TAGS = (); }; };
+		921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8BA11BDA117100DFFFDD /* MMHRushDealsModel.m */; settings = {ASSET_TAGS = (); }; };
 		92D871A81BCE35CB009D6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871A71BCE35CB009D6A1C /* main.m */; };
 		92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AA1BCE35CC009D6A1C /* AppDelegate.m */; };
 		92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AC1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld */; };
@@ -1460,6 +1461,8 @@
 		921B8B9B1BD8CFE600DFFFDD /* MMHShopRecommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHShopRecommentModel.m; sourceTree = "<group>"; };
 		921B8B9D1BD8D09E00DFFFDD /* MMHDiscountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHDiscountCell.h; sourceTree = "<group>"; };
 		921B8B9E1BD8D09E00DFFFDD /* MMHDiscountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHDiscountCell.m; sourceTree = "<group>"; };
+		921B8BA01BDA117100DFFFDD /* MMHRushDealsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHRushDealsModel.h; sourceTree = "<group>"; };
+		921B8BA11BDA117100DFFFDD /* MMHRushDealsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHRushDealsModel.m; sourceTree = "<group>"; };
 		92D871A21BCE35CB009D6A1C /* MMHMeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHMeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D871A61BCE35CB009D6A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D871A71BCE35CB009D6A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -3264,6 +3267,8 @@
 				921B8B981BD8CFCB00DFFFDD /* MMHShopDatailDataModel.m */,
 				921B8B9A1BD8CFE600DFFFDD /* MMHShopRecommentModel.h */,
 				921B8B9B1BD8CFE600DFFFDD /* MMHShopRecommentModel.m */,
+				921B8BA01BDA117100DFFFDD /* MMHRushDealsModel.h */,
+				921B8BA11BDA117100DFFFDD /* MMHRushDealsModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -6922,6 +6927,7 @@
 				92D872171BCE3B57009D6A1C /* MJRefreshNormalHeader.m in Sources */,
 				92F5FD231BD09B4C00F6E656 /* NSObject+MJProperty.m in Sources */,
 				921B8B961BD8CF6D00DFFFDD /* MMHRecommentModel.m in Sources */,
+				921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */,
 				921B8B9C1BD8CFE600DFFFDD /* MMHShopRecommentModel.m in Sources */,
 				92D872181BCE3B57009D6A1C /* MJRefreshStateHeader.m in Sources */,
 				92F5FD291BD09B4C00F6E656 /* SDWebImageDownloader.m in Sources */,

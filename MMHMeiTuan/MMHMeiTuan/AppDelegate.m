@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MMHTabBarViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate ()
 

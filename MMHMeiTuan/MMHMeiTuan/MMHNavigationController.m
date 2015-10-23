@@ -17,19 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationBar.translucent = NO; //透明度
+    self.navigationBar.translucent = NO;
     
-    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,kFONT16,NSFontAttributeName, nil]];
+    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, kFONT16, NSFontAttributeName, nil]];
     
     self.navigationBar.barTintColor = navigationBarColor;
     
-    if (([[[UIDevice currentDevice]systemVersion]doubleValue]>=7.0)) {
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0))
+    {
         self.edgesForExtendedLayout = UIRectEdgeNone;//视图控制器，四条边不指定
         self.extendedLayoutIncludesOpaqueBars = NO;//不透明的操作栏
         self.modalPresentationCapturesStatusBarAppearance = NO;
-        [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@""]
-                                         forBarPosition:UIBarPositionTop
-                                             barMetrics:UIBarMetricsDefault];
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@""]
+                                          forBarPosition:UIBarPositionTop
+                                              barMetrics:UIBarMetricsDefault];
     }
     else
     {
@@ -37,6 +38,7 @@
                                  forBarMetrics:UIBarMetricsDefault];
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
