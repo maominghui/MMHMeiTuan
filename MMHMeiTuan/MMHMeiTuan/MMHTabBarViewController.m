@@ -70,7 +70,7 @@
     [self setupChildViewController:visitVC title:@"上门" imageName:@"icon_tabbar_onsite" seleceImageName:@"icon_tabbar_onsite_selected"];
     
     MMHMerchantViewController *merchantVC = [[MMHMerchantViewController alloc]init];
-    [self setupChildViewController:merchantVC title:@"商家" imageName:@"icon_tabbar_merchant_normal" seleceImageName:@"icon_tabbar_merchant_normal_selected"];
+    [self setupChildViewController:merchantVC title:@"商家" imageName:@"icon_tabbar_merchant_normal" seleceImageName:@"icon_tabbar_merchant_selected"];
     
     MMHMineViewController *mineVC = [[MMHMineViewController alloc]init];
     [self setupChildViewController:mineVC title:@"我的" imageName:@"icon_tabbar_mine" seleceImageName:@"icon_tabbar_mine_selected"];
