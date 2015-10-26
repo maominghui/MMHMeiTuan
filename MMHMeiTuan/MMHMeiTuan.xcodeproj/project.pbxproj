@@ -37,6 +37,7 @@
 		92ABABD51BDA333C00030F81 /* MMHMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABABD41BDA333C00030F81 /* MMHMoreCell.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BE11BDDFC1400E36012 /* MMHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BE41BDE224200E36012 /* MMHHomeServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE31BDE224200E36012 /* MMHHomeServiceCell.m */; settings = {ASSET_TAGS = (); }; };
 		92D871A81BCE35CB009D6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871A71BCE35CB009D6A1C /* main.m */; };
 		92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AA1BCE35CC009D6A1C /* AppDelegate.m */; };
 		92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AC1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld */; };
@@ -1472,6 +1473,8 @@
 		92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHServiceAdModel.m; sourceTree = "<group>"; };
 		92B51BDF1BDDFC1400E36012 /* MMHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHWebViewController.h; sourceTree = "<group>"; };
 		92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHWebViewController.m; sourceTree = "<group>"; };
+		92B51BE21BDE224200E36012 /* MMHHomeServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHHomeServiceCell.h; sourceTree = "<group>"; };
+		92B51BE31BDE224200E36012 /* MMHHomeServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHHomeServiceCell.m; sourceTree = "<group>"; };
 		92D871A21BCE35CB009D6A1C /* MMHMeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHMeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D871A61BCE35CB009D6A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D871A71BCE35CB009D6A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -5399,6 +5402,8 @@
 		92F5FCCF1BD09B0000F6E656 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92B51BE21BDE224200E36012 /* MMHHomeServiceCell.h */,
+				92B51BE31BDE224200E36012 /* MMHHomeServiceCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -6947,6 +6952,7 @@
 				92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */,
 				92F5FD321BD09B4C00F6E656 /* UIView+WebCacheOperation.m in Sources */,
 				92D8721C1BCE3B57009D6A1C /* UIScrollView+MJRefresh.m in Sources */,
+				92B51BE41BDE224200E36012 /* MMHHomeServiceCell.m in Sources */,
 				92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */,
 				92F5FD311BD09B4C00F6E656 /* UIImageView+WebCache.m in Sources */,
 				921B8B6B1BD4F44700DFFFDD /* MMHAllCityNameViewController.m in Sources */,
