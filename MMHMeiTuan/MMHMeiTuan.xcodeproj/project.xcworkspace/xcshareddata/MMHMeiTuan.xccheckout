@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B8BC6C54-C897-4785-9E91-17982FED63E2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MMHMeiTuan</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C91581BCC469DDB559DB3E1649B63C785553F891</key>
 		<string>https://github.com/maominghui/MMHMeiTuan.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MMHMeiTuan/MMHMeiTuan.xcodeproj</string>
+	<string>MMHMeiTuan/MMHMeiTuan.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C91581BCC469DDB559DB3E1649B63C785553F891</key>

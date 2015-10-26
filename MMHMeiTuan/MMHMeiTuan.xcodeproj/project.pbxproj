@@ -35,6 +35,8 @@
 		921B8B9F1BD8D09E00DFFFDD /* MMHDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8B9E1BD8D09E00DFFFDD /* MMHDiscountCell.m */; settings = {ASSET_TAGS = (); }; };
 		921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8BA11BDA117100DFFFDD /* MMHRushDealsModel.m */; settings = {ASSET_TAGS = (); }; };
 		92ABABD51BDA333C00030F81 /* MMHMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABABD41BDA333C00030F81 /* MMHMoreCell.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BE11BDDFC1400E36012 /* MMHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92D871A81BCE35CB009D6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871A71BCE35CB009D6A1C /* main.m */; };
 		92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AA1BCE35CC009D6A1C /* AppDelegate.m */; };
 		92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AC1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld */; };
@@ -1466,6 +1468,10 @@
 		921B8BA11BDA117100DFFFDD /* MMHRushDealsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHRushDealsModel.m; sourceTree = "<group>"; };
 		92ABABD31BDA333C00030F81 /* MMHMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMoreCell.h; sourceTree = "<group>"; };
 		92ABABD41BDA333C00030F81 /* MMHMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMoreCell.m; sourceTree = "<group>"; };
+		92B51BDC1BDDF90300E36012 /* MMHServiceAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHServiceAdModel.h; sourceTree = "<group>"; };
+		92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHServiceAdModel.m; sourceTree = "<group>"; };
+		92B51BDF1BDDFC1400E36012 /* MMHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHWebViewController.h; sourceTree = "<group>"; };
+		92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHWebViewController.m; sourceTree = "<group>"; };
 		92D871A21BCE35CB009D6A1C /* MMHMeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHMeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D871A61BCE35CB009D6A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D871A71BCE35CB009D6A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -5373,6 +5379,8 @@
 			children = (
 				92F5FCC51BCF621000F6E656 /* MMHVisitViewController.h */,
 				92F5FCC61BCF621000F6E656 /* MMHVisitViewController.m */,
+				92B51BDF1BDDFC1400E36012 /* MMHWebViewController.h */,
+				92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -5382,6 +5390,8 @@
 			children = (
 				921B8B5F1BD0FEEC00DFFFDD /* MMHHomeServiceModel.h */,
 				921B8B601BD0FEEC00DFFFDD /* MMHHomeServiceModel.m */,
+				92B51BDC1BDDF90300E36012 /* MMHServiceAdModel.h */,
+				92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -6934,6 +6944,7 @@
 				92F5FD1A1BD09B4C00F6E656 /* AFURLRequestSerialization.m in Sources */,
 				92D872131BCE3B57009D6A1C /* MJRefreshBackGifFooter.m in Sources */,
 				92F5FD1B1BD09B4C00F6E656 /* AFURLResponseSerialization.m in Sources */,
+				92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */,
 				92F5FD321BD09B4C00F6E656 /* UIView+WebCacheOperation.m in Sources */,
 				92D8721C1BCE3B57009D6A1C /* UIScrollView+MJRefresh.m in Sources */,
 				92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */,
@@ -6952,6 +6963,7 @@
 				921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */,
 				921B8B9C1BD8CFE600DFFFDD /* MMHShopRecommentModel.m in Sources */,
 				92D872181BCE3B57009D6A1C /* MJRefreshStateHeader.m in Sources */,
+				92B51BE11BDDFC1400E36012 /* MMHWebViewController.m in Sources */,
 				92F5FD291BD09B4C00F6E656 /* SDWebImageDownloader.m in Sources */,
 				92D872151BCE3B57009D6A1C /* MJRefreshBackStateFooter.m in Sources */,
 				92F5FD2E1BD09B4C00F6E656 /* UIImage+GIF.m in Sources */,
