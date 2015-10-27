@@ -40,6 +40,7 @@
     [self initData];
     //加载城市数据
     [self laodCityData];
+    
 }
 
 -(void)initData{

@@ -6,7 +6,7 @@
 //  Copyright © 2015年 com.nyist. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol MMHHomeServiceCellDelegate <NSObject>
 @optional
@@ -15,7 +15,7 @@
 
 @end
 
-@interface MMHHomeServiceCell : NSObject
+@interface MMHHomeServiceCell : UITableViewCell
 @property(nonatomic, weak)id<MMHHomeServiceCellDelegate>delegate;
 @property(nonatomic, strong) NSMutableArray *homeServiceArray;
 

@@ -38,6 +38,12 @@
 		92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BE11BDDFC1400E36012 /* MMHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BE41BDE224200E36012 /* MMHHomeServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE31BDE224200E36012 /* MMHHomeServiceCell.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BE71BDF122C00E36012 /* NSString+MMHColorString.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE61BDF122C00E36012 /* NSString+MMHColorString.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BEC1BDF497E00E36012 /* MMHMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BEB1BDF497E00E36012 /* MMHMineModel.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BEF1BDF4F1800E36012 /* MMHMineBigTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BEE1BDF4F1800E36012 /* MMHMineBigTitleCell.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BF21BDF520B00E36012 /* MMHMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BF11BDF520B00E36012 /* MMHMineCell.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BFB1BDF56A900E36012 /* MMHMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BF91BDF56A900E36012 /* MMHMineHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		92B51BFC1BDF56A900E36012 /* MMHMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B51BFA1BDF56A900E36012 /* MMHMineHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
 		92D871A81BCE35CB009D6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871A71BCE35CB009D6A1C /* main.m */; };
 		92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AA1BCE35CC009D6A1C /* AppDelegate.m */; };
 		92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AC1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld */; };
@@ -1475,6 +1481,17 @@
 		92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHWebViewController.m; sourceTree = "<group>"; };
 		92B51BE21BDE224200E36012 /* MMHHomeServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHHomeServiceCell.h; sourceTree = "<group>"; };
 		92B51BE31BDE224200E36012 /* MMHHomeServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHHomeServiceCell.m; sourceTree = "<group>"; };
+		92B51BE51BDF122C00E36012 /* NSString+MMHColorString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MMHColorString.h"; sourceTree = "<group>"; };
+		92B51BE61BDF122C00E36012 /* NSString+MMHColorString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MMHColorString.m"; sourceTree = "<group>"; };
+		92B51BEA1BDF497E00E36012 /* MMHMineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMineModel.h; sourceTree = "<group>"; };
+		92B51BEB1BDF497E00E36012 /* MMHMineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMineModel.m; sourceTree = "<group>"; };
+		92B51BED1BDF4F1800E36012 /* MMHMineBigTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMineBigTitleCell.h; sourceTree = "<group>"; };
+		92B51BEE1BDF4F1800E36012 /* MMHMineBigTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMineBigTitleCell.m; sourceTree = "<group>"; };
+		92B51BF01BDF520B00E36012 /* MMHMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMineCell.h; sourceTree = "<group>"; };
+		92B51BF11BDF520B00E36012 /* MMHMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMineCell.m; sourceTree = "<group>"; };
+		92B51BF81BDF56A900E36012 /* MMHMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMineHeaderView.h; sourceTree = "<group>"; };
+		92B51BF91BDF56A900E36012 /* MMHMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMineHeaderView.m; sourceTree = "<group>"; };
+		92B51BFA1BDF56A900E36012 /* MMHMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHMineHeaderView.xib; sourceTree = "<group>"; };
 		92D871A21BCE35CB009D6A1C /* MMHMeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHMeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D871A61BCE35CB009D6A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D871A71BCE35CB009D6A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -3045,6 +3062,29 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		92B51BE81BDF495600E36012 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92B51BEA1BDF497E00E36012 /* MMHMineModel.h */,
+				92B51BEB1BDF497E00E36012 /* MMHMineModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		92B51BE91BDF495B00E36012 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92B51BED1BDF4F1800E36012 /* MMHMineBigTitleCell.h */,
+				92B51BEE1BDF4F1800E36012 /* MMHMineBigTitleCell.m */,
+				92B51BF01BDF520B00E36012 /* MMHMineCell.h */,
+				92B51BF11BDF520B00E36012 /* MMHMineCell.m */,
+				92B51BF81BDF56A900E36012 /* MMHMineHeaderView.h */,
+				92B51BF91BDF56A900E36012 /* MMHMineHeaderView.m */,
+				92B51BFA1BDF56A900E36012 /* MMHMineHeaderView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		92D871991BCE35CB009D6A1C = {
 			isa = PBXGroup;
 			children = (
@@ -3178,6 +3218,8 @@
 		92D871D31BCE370E009D6A1C /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				92B51BE91BDF495B00E36012 /* View */,
+				92B51BE81BDF495600E36012 /* Model */,
 				92F5FCB81BCF60E600F6E656 /* Controller */,
 			);
 			name = "我的";
@@ -3243,6 +3285,8 @@
 				921B8B5A1BD0F46900DFFFDD /* UITableView+MMHTableView.m */,
 				921B8B751BD736AF00DFFFDD /* UIBarButtonItem+MMHBarButtonItem.h */,
 				921B8B761BD736AF00DFFFDD /* UIBarButtonItem+MMHBarButtonItem.m */,
+				92B51BE51BDF122C00E36012 /* NSString+MMHColorString.h */,
+				92B51BE61BDF122C00E36012 /* NSString+MMHColorString.m */,
 			);
 			name = "分类";
 			sourceTree = "<group>";
@@ -6135,6 +6179,7 @@
 				92D87BAF1BCE4353009D6A1C /* icon_pay_success.png in Resources */,
 				92D8788C1BCE4353009D6A1C /* bg_discovery_refresh@2x.png in Resources */,
 				92D87C5F1BCE4353009D6A1C /* line_route_separator@2x.png in Resources */,
+				92B51BFC1BDF56A900E36012 /* MMHMineHeaderView.xib in Resources */,
 				92D8796E1BCE4353009D6A1C /* btn_deals_filter_normal.png in Resources */,
 				92D87BF61BCE4353009D6A1C /* icon_route_car_notselected@2x.png in Resources */,
 				92D879CD1BCE4353009D6A1C /* cinema_line.png in Resources */,
@@ -6924,6 +6969,8 @@
 				92F5FCB71BCF5B6E00F6E656 /* MMHNavigationController.m in Sources */,
 				92F5FD1D1BD09B4C00F6E656 /* MJConst.m in Sources */,
 				92F5FD161BD09B4C00F6E656 /* AFHTTPSessionManager.m in Sources */,
+				92B51BF21BDF520B00E36012 /* MMHMineCell.m in Sources */,
+				92B51BFB1BDF56A900E36012 /* MMHMineHeaderView.m in Sources */,
 				92D8721B1BCE3B57009D6A1C /* UIScrollView+MJExtension.m in Sources */,
 				921B8B711BD5E6DE00DFFFDD /* MMHRushDataModel.m in Sources */,
 				921B8B901BD8CE7000DFFFDD /* MMHDiscountModel.m in Sources */,
@@ -6939,6 +6986,7 @@
 				92F5FD261BD09B4C00F6E656 /* SDImageCache.m in Sources */,
 				92D8721D1BCE3B57009D6A1C /* UIView+MJExtension.m in Sources */,
 				92F5FD281BD09B4C00F6E656 /* SDWebImageDecoder.m in Sources */,
+				92B51BEF1BDF4F1800E36012 /* MMHMineBigTitleCell.m in Sources */,
 				921B8B991BD8CFCB00DFFFDD /* MMHShopDatailDataModel.m in Sources */,
 				92D8720F1BCE3B57009D6A1C /* MJRefreshHeader.m in Sources */,
 				92F5FD171BD09B4C00F6E656 /* AFNetworkReachabilityManager.m in Sources */,
@@ -6949,6 +6997,7 @@
 				92F5FD1A1BD09B4C00F6E656 /* AFURLRequestSerialization.m in Sources */,
 				92D872131BCE3B57009D6A1C /* MJRefreshBackGifFooter.m in Sources */,
 				92F5FD1B1BD09B4C00F6E656 /* AFURLResponseSerialization.m in Sources */,
+				92B51BEC1BDF497E00E36012 /* MMHMineModel.m in Sources */,
 				92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */,
 				92F5FD321BD09B4C00F6E656 /* UIView+WebCacheOperation.m in Sources */,
 				92D8721C1BCE3B57009D6A1C /* UIScrollView+MJRefresh.m in Sources */,
@@ -6956,6 +7005,7 @@
 				92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */,
 				92F5FD311BD09B4C00F6E656 /* UIImageView+WebCache.m in Sources */,
 				921B8B6B1BD4F44700DFFFDD /* MMHAllCityNameViewController.m in Sources */,
+				92B51BE71BDF122C00E36012 /* NSString+MMHColorString.m in Sources */,
 				92F5FCB01BCF4C0800F6E656 /* MMHTabBarButton.m in Sources */,
 				92F5FD2D1BD09B4C00F6E656 /* UIButton+WebCache.m in Sources */,
 				92F5FD191BD09B4C00F6E656 /* AFURLConnectionOperation.m in Sources */,
