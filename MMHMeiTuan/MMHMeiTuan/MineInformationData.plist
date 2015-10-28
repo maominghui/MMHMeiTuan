@@ -6,25 +6,25 @@
 		<key>image</key>
 		<string>icon</string>
 		<key>title</key>
-		<string>团购订单</string>
+		<string>我的订单</string>
 	</dict>
 	<dict>
 		<key>image</key>
 		<string>icon</string>
 		<key>title</key>
-		<string>预定订单</string>
+		<string>美团钱包</string>
 	</dict>
 	<dict>
 		<key>image</key>
 		<string>icon</string>
 		<key>title</key>
-		<string>上门订单</string>
+		<string>抵用券</string>
 	</dict>
 	<dict>
 		<key>image</key>
 		<string>icon</string>
 		<key>title</key>
-		<string>我的评价</string>
+		<string>积分商城</string>
 	</dict>
 	<dict>
 		<key>image</key>
@@ -36,19 +36,7 @@
 		<key>image</key>
 		<string>icon</string>
 		<key>title</key>
-		<string>会员俱乐部</string>
-	</dict>
-	<dict>
-		<key>image</key>
-		<string>icon</string>
-		<key>title</key>
 		<string>我的抽奖</string>
-	</dict>
-	<dict>
-		<key>image</key>
-		<string>icon</string>
-		<key>title</key>
-		<string>我的抵用券</string>
 	</dict>
 </array>
 </plist>

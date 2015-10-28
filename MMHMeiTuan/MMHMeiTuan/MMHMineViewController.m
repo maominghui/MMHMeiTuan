@@ -81,7 +81,8 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 5;
+
+    return 8;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -118,7 +119,7 @@
 
 -(void)headerTap:(UITapGestureRecognizer *)sender{
     MMHWebViewController *webVC = [[MMHWebViewController alloc]init];
-    webVC.urlStr = @"http://www.maominghui.github.io";
+    webVC.urlStr = @"http://maominghui.github.io";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

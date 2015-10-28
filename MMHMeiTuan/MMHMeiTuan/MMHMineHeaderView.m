@@ -25,6 +25,7 @@
         headView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_login"]];
     }
     
-    return headView;}
+    return headView;
+}
 
 @end

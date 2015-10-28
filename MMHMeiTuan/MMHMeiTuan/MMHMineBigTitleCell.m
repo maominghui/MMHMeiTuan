@@ -21,16 +21,29 @@
 }
 
 +(instancetype)cellWithTableView:(UITableView *)tableView{
-    static NSString *mmhMineBigTitleCell = @"mmhmineCell";
-    MMHMineBigTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:mmhMineBigTitleCell];
-    if (cell == nil) {
-        cell = [[MMHMineBigTitleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:mmhMineBigTitleCell];
+//    static NSString *mmhMineBigTitleCell = @"mmhmineCell";
+//    MMHMineBigTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:mmhMineBigTitleCell];
+//    if (cell == nil) {
+//        cell = [[MMHMineBigTitleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:mmhMineBigTitleCell];
+//    }
+//    
+//    cell.textLabel.text = @"Amo";
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    
+//    return cell;
+    
+    static NSString *ID = @"MMHMineBigTitleCell";
+    
+    MMHMineBigTitleCell *title = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (title == nil) {
+        //从xib中加载cell
+        title = [[[NSBundle mainBundle]loadNibNamed:@"MMHMineBigTitleCell" owner:nil options:nil]lastObject];
+        
+        title.backgroundColor = [UIColor whiteColor];
     }
     
-    cell.textLabel.text = @"Amo";
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return title;
     
-    return cell;
 }
 
 @end

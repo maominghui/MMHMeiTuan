@@ -44,6 +44,9 @@
 		92B51BF21BDF520B00E36012 /* MMHMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BF11BDF520B00E36012 /* MMHMineCell.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BFB1BDF56A900E36012 /* MMHMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BF91BDF56A900E36012 /* MMHMineHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BFC1BDF56A900E36012 /* MMHMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B51BFA1BDF56A900E36012 /* MMHMineHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		92B51BFE1BDF720400E36012 /* MMHMineBigTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B51BFD1BDF720300E36012 /* MMHMineBigTitleCell.xib */; settings = {ASSET_TAGS = (); }; };
+		92B51C011BE076A500E36012 /* MMHImageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51C001BE076A500E36012 /* MMHImageScrollCell.m */; settings = {ASSET_TAGS = (); }; };
+		92B51C041BE0782700E36012 /* MMHImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51C031BE0782700E36012 /* MMHImageScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		92D871A81BCE35CB009D6A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871A71BCE35CB009D6A1C /* main.m */; };
 		92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AA1BCE35CC009D6A1C /* AppDelegate.m */; };
 		92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D871AC1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld */; };
@@ -1492,6 +1495,11 @@
 		92B51BF81BDF56A900E36012 /* MMHMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMineHeaderView.h; sourceTree = "<group>"; };
 		92B51BF91BDF56A900E36012 /* MMHMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMineHeaderView.m; sourceTree = "<group>"; };
 		92B51BFA1BDF56A900E36012 /* MMHMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHMineHeaderView.xib; sourceTree = "<group>"; };
+		92B51BFD1BDF720300E36012 /* MMHMineBigTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHMineBigTitleCell.xib; sourceTree = "<group>"; };
+		92B51BFF1BE076A500E36012 /* MMHImageScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHImageScrollCell.h; sourceTree = "<group>"; };
+		92B51C001BE076A500E36012 /* MMHImageScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHImageScrollCell.m; sourceTree = "<group>"; };
+		92B51C021BE0782700E36012 /* MMHImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHImageScrollView.h; sourceTree = "<group>"; };
+		92B51C031BE0782700E36012 /* MMHImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHImageScrollView.m; sourceTree = "<group>"; };
 		92D871A21BCE35CB009D6A1C /* MMHMeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMHMeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D871A61BCE35CB009D6A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D871A71BCE35CB009D6A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -3076,6 +3084,7 @@
 			children = (
 				92B51BED1BDF4F1800E36012 /* MMHMineBigTitleCell.h */,
 				92B51BEE1BDF4F1800E36012 /* MMHMineBigTitleCell.m */,
+				92B51BFD1BDF720300E36012 /* MMHMineBigTitleCell.xib */,
 				92B51BF01BDF520B00E36012 /* MMHMineCell.h */,
 				92B51BF11BDF520B00E36012 /* MMHMineCell.m */,
 				92B51BF81BDF56A900E36012 /* MMHMineHeaderView.h */,
@@ -5448,6 +5457,10 @@
 			children = (
 				92B51BE21BDE224200E36012 /* MMHHomeServiceCell.h */,
 				92B51BE31BDE224200E36012 /* MMHHomeServiceCell.m */,
+				92B51BFF1BE076A500E36012 /* MMHImageScrollCell.h */,
+				92B51C001BE076A500E36012 /* MMHImageScrollCell.m */,
+				92B51C021BE0782700E36012 /* MMHImageScrollView.h */,
+				92B51C031BE0782700E36012 /* MMHImageScrollView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -5758,6 +5771,7 @@
 				92D87C6D1BCE4353009D6A1C /* mapTabButton.png in Resources */,
 				92D87BE81BCE4353009D6A1C /* icon_reserve_default@2x.png in Resources */,
 				92D8789F1BCE4353009D6A1C /* bg_homepage_hottopic_shadow.png in Resources */,
+				92B51BFE1BDF720400E36012 /* MMHMineBigTitleCell.xib in Resources */,
 				92D87AEB1BCE4353009D6A1C /* icon_invite_share_logo_QQ@2x.png in Resources */,
 				92D87B001BCE4353009D6A1C /* icon_login_weixin@2x.png in Resources */,
 				92D878911BCE4353009D6A1C /* bg_dropdown_section@2x.png in Resources */,
@@ -6958,6 +6972,7 @@
 				921B8B771BD736AF00DFFFDD /* UIBarButtonItem+MMHBarButtonItem.m in Sources */,
 				92F5FCBF1BCF617A00F6E656 /* MMHMoreViewController.m in Sources */,
 				92F5FCCA1BCF7F3E00F6E656 /* MMHBaseViewController.m in Sources */,
+				92B51C011BE076A500E36012 /* MMHImageScrollCell.m in Sources */,
 				92D87CD41BCE46B9009D6A1C /* MMHSelectAddressView.m in Sources */,
 				92F5FD141BD09B4C00F6E656 /* AFHTTPRequestOperation.m in Sources */,
 				92F5FD2A1BD09B4C00F6E656 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -7014,6 +7029,7 @@
 				92F5FCC71BCF621000F6E656 /* MMHVisitViewController.m in Sources */,
 				92D87CC41BCE4433009D6A1C /* ViewController.m in Sources */,
 				92D872171BCE3B57009D6A1C /* MJRefreshNormalHeader.m in Sources */,
+				92B51C041BE0782700E36012 /* MMHImageScrollView.m in Sources */,
 				92F5FD231BD09B4C00F6E656 /* NSObject+MJProperty.m in Sources */,
 				921B8B961BD8CF6D00DFFFDD /* MMHRecommentModel.m in Sources */,
 				921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */,
