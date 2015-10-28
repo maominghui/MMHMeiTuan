@@ -38,6 +38,9 @@
     
     //初始化TableView
     [self initVisitTableView];
+    
+    //设置刷新
+    [self setRefreshInVisitTableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,7 +106,105 @@
 -(void)setRefreshInVisitTableView{
     //添加下拉的动画图片
     //设置下拉刷新回调
-
+    [self.visitTableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    
+    //设置普通状态的动画图片
+    NSMutableArray *idleImages = [NSMutableArray array];
+    
+    UIImage *image = [UIImage imageNamed:@"icon_listheader_animation_1"];
+    [idleImages addObject:image];
+    
+    [self.visitTableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+    
+    //设置即将刷新的动画图片
+    NSMutableArray *refreshingImages = [NSMutableArray array];
+    UIImage *image1 = [UIImage imageNamed:@"icon_listheader_animation_1"];
+    [refreshingImages addObject:image1];
+    UIImage *image2 = [UIImage imageNamed:@"icon_listheader_animation_2"];
+    [refreshingImages addObject:image2];
+    
+    /** 松开就可以进行刷新的状态 */
+    [self.visitTableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+    
+    //设置正在刷新的动画图片
+    [self.visitTableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+    
+    //马上进入刷新状态
+    [self.visitTableView.gifHeader beginRefreshing];
+    
 }
+
+-(void)refreshData{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //1.加载广告的数据
+        [self loadAdData];
+        
+        //2.加载服务的数据
+        [self laodServiewData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    });
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return 155.0;
+    }else{
+        if (_homeServiceArray.count != 0) {
+            NSInteger y = (_homeServiceArray.count + 2 - 1) / 2;
+            return 125 * y + 5;
+        }else{
+            return 125 * 5 + 5;
+        }
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  2;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        static NSString *advCell = @"advCell";
+        MMHImageScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:advCell];
+        if (cell == nil) {
+            cell = [[MMHImageScrollCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:advCell frame:CGRectMake(0, 0, SCREENWIDTH, 155)];
+        }
+        
+        if (_advImageUrlArray.count != 0) {
+            [cell setImageArr:_advImageUrlArray];
+        }
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+        
+    }else if (indexPath.row == 1){
+        MMHHomeServiceCell *cell = [MMHHomeServiceCell cellWithTableView:tableView];
+        cell.delegate = self;
+        [cell setHomeServiceArray:_homeServiceArray];
+        return cell;
+        
+    }else{
+        return nil;
+    }
+}
+
+
+#pragma mark - JFHomeServiceCellDelegate
+-(void)homeServiceCellTapClick:(long )index{
+    JFLog(@"%ld", index-10);
+    MMHHomeServiceModel *homeServiceModel = _homeServiceArray[index-10];
+    NSString *urlStr =  [[GetUrlString sharedManager]urlWithHomeServerWebData:homeServiceModel];
+    
+    MMHWebViewController *webView = [[MMHWebViewController alloc] init];
+    webView.urlStr = urlStr;
+    [self.navigationController pushViewController:webView animated:YES];
+    
+    
+}
+
 
 @end
