@@ -94,7 +94,7 @@
         
     }
 }
-
+//
 -(void)OnTapBackView:(UITapGestureRecognizer *)sender{
     JFLog(@"%ld", (long)sender.view.tag);
     if ([self.delegate respondsToSelector:@selector(homeServiceCellTapClick:)]) {
