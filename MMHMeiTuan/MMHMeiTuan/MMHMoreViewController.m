@@ -8,10 +8,11 @@
 
 #import "MMHMoreViewController.h"
 #import "MMHMoreCell.h"
+#import "MMHWebViewController.h"
 @interface MMHMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *moreTableView;
-@property(nonatomic, strong)NSArray *moreModelArray;
+@property(nonatomic,strong)NSArray *moreModelArray;
 @end
 
 @implementation MMHMoreViewController
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"更多";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor clearColor];
     
     //初始化
     [self initView];
@@ -34,7 +35,7 @@
 
 #pragma mark - 初始化TableView
 -(void)initView{
-    self.moreTableView = [UITableView initWithTableView:CGRectMake(0, 0, SCREENWIDTH, SCREENWIDTH-64) withDelegate:self];
+    self.moreTableView = [UITableView initWithTableView:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) withDelegate:self];
     [self.view addSubview:self.moreTableView];
 }
 
@@ -74,16 +75,16 @@
     if (indexPath.section == 2) {
         if (indexPath.row == 1) {
             //支付帮助
-//            NSString *urlStr =  [[GetUrlString sharedManager]urlWithPayHelp];
-//            JFWebViewController *webVC = [[JFWebViewController alloc] init];
-//            webVC.urlStr = urlStr;
-//            [self.navigationController pushViewController:webVC animated:YES];
+            NSString *urlStr =  [[GetUrlString sharedManager]urlWithPayHelp];
+            MMHWebViewController *webVC = [[MMHWebViewController alloc] init];
+            webVC.urlStr = urlStr;
+            [self.navigationController pushViewController:webVC animated:YES];
         }else if (indexPath.row == 4){
 //            //我要应聘
-//            NSString *urlStr =  [[GetUrlString sharedManager]urlWithHelpWorking];
-//            JFWebViewController *webVC = [[JFWebViewController alloc] init];
-//            webVC.urlStr = urlStr;
-//            [self.navigationController pushViewController:webVC animated:YES];
+            NSString *urlStr =  [[GetUrlString sharedManager]urlWithHelpWorking];
+            MMHWebViewController *webVC = [[MMHWebViewController alloc] init];
+            webVC.urlStr = urlStr;
+            [self.navigationController pushViewController:webVC animated:YES];
         }
     }
     

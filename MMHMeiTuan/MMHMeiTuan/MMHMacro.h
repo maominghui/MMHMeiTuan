@@ -51,6 +51,6 @@
 //#import "BMapKit.h"
 #import "UIBarButtonItem+MMHBarButtonItem.h"
 #import "UITableView+MMHTableView.h"
-
+#import "IQKeyboardManager.h"
 
 #endif
