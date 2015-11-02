@@ -26,6 +26,7 @@
     
     if (self) {
         self.imageScrollView = [[MMHImageScrollView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) imageArray:self.imageArr];
+        [self.contentView addSubview:self.imageScrollView];
     }
     
     

@@ -12,16 +12,14 @@
 #import "MMHHomeServiceCell.h"
 #import "MMHHomeServiceModel.h"
 #import "MMHWebViewController.h"
-
-
-@interface MMHVisitViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MMHVisitViewController ()<UITableViewDelegate, UITableViewDataSource, MMHHomeServiceCellDelegate>
 {
     NSMutableArray *_advArray;//广告数据源
     NSMutableArray *_homeServiceArray;//上门服务数据源
     NSMutableArray *_advImageUrlArray;//广告图片数组
 }
 
-@property (nonatomic, strong)UITableView *visitTableView;
+@property (nonatomic , strong) UITableView *visitTableView;
 
 @end
 
@@ -29,29 +27,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"上门服务";
+    self.title =@"上门服务";
     self.view.backgroundColor = [UIColor whiteColor];
-    
     
     //初始化数组
     [self initData];
     
-    //初始化TableView
+    //初始化tableView
     [self initVisitTableView];
     
     //设置刷新
     [self setRefreshInVisitTableView];
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - 加载广告的数据
 -(void)loadAdData{
-    NSString *urlString = [[GetUrlString sharedManager]urlWithVisitAd];
-    [NetWork sendGetUrl:urlString withParams:nil success:^(id responseBody) {
+    NSString *urlStr = [[GetUrlString sharedManager]urlWithVisitAd];
+    [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
         JFLog(@"%@", responseBody);
         [_advImageUrlArray removeAllObjects];
         [_advArray removeAllObjects];
@@ -64,17 +56,19 @@
         }
         
         [self.visitTableView reloadData];
+        
     } failure:^(NSError *error) {
-        JFLog(@"%@",error);
+        
+        JFLog(@"%@", error);
     }];
+    
+    
 }
-
 #pragma mark - 加载家政服务的数据
 -(void)laodServiewData{
     NSString *urlStr = [[GetUrlString sharedManager]urlWithVisitService];
     [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
-        JFLog(@"%@",responseBody);
-        
+        JFLog(@"%@", responseBody);
         [_homeServiceArray removeAllObjects];
         NSMutableArray *dataArray = [responseBody objectForKey:@"data"];
         for (int i = 0; i < dataArray.count; ++i) {
@@ -88,21 +82,31 @@
     } failure:^(NSError *error) {
         JFLog(@"%@", error);
         [self.visitTableView.header endRefreshing];
+        
     }];
+    
+    
+    
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 -(void)initData{
     _advArray = [NSMutableArray array];
     _advImageUrlArray = [NSMutableArray array];
     _homeServiceArray = [NSMutableArray array];
+    
 }
 
 -(void)initVisitTableView{
     self.visitTableView = [UITableView initWithTableView:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-64) withDelegate:self];
     [self.view addSubview:self.visitTableView];
+    
 }
 
-#pragma mark - 设置下拉刷新
+#pragma mark - 设置下啦刷新
 -(void)setRefreshInVisitTableView{
     //添加下拉的动画图片
     //设置下拉刷新回调
@@ -116,26 +120,27 @@
     
     [self.visitTableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
     
-    //设置即将刷新的动画图片
+    //设置即将刷新状态的动画图片
     NSMutableArray *refreshingImages = [NSMutableArray array];
     UIImage *image1 = [UIImage imageNamed:@"icon_listheader_animation_1"];
     [refreshingImages addObject:image1];
     UIImage *image2 = [UIImage imageNamed:@"icon_listheader_animation_2"];
     [refreshingImages addObject:image2];
     
-    /** 松开就可以进行刷新的状态 */
+    
     [self.visitTableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
     
-    //设置正在刷新的动画图片
+    //设置正在刷新是的动画图片
     [self.visitTableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
     
     //马上进入刷新状态
     [self.visitTableView.gifHeader beginRefreshing];
     
+    
 }
 
 -(void)refreshData{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
         //1.加载广告的数据
         [self loadAdData];
         
@@ -143,56 +148,60 @@
         [self laodServiewData];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
+            //这个里面是主线程要做的事  可以刷新UI
         });
     });
+    
+    
 }
 
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         return 155.0;
     }else{
-        if (_homeServiceArray.count != 0) {
-            NSInteger y = (_homeServiceArray.count + 2 - 1) / 2;
-            return 125 * y + 5;
+        if (_homeServiceArray.count!=0) {
+            NSInteger y = (_homeServiceArray.count +2-1)/2;
+            return 125*y+5;
         }else{
-            return 125 * 5 + 5;
+            return 125*5+5;
         }
     }
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  2;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+    
 }
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         static NSString *advCell = @"advCell";
         MMHImageScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:advCell];
         if (cell == nil) {
-            cell = [[MMHImageScrollCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:advCell frame:CGRectMake(0, 0, SCREENWIDTH, 155)];
+            cell = [[MMHImageScrollCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:advCell frame:CGRectMake(0, 0, SCREENWIDTH, 155)];
         }
         
-        if (_advImageUrlArray.count != 0) {
-            [cell setImageArr:_advImageUrlArray];
+        //JFImageScrollCell *cell = [JFImageScrollCell cellWithTableView:tableView];
+        
+        if (_advImageUrlArray.count !=0) {
+            [cell setImageArray:_advImageUrlArray];
         }
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-        
     }else if (indexPath.row == 1){
         MMHHomeServiceCell *cell = [MMHHomeServiceCell cellWithTableView:tableView];
         cell.delegate = self;
         [cell setHomeServiceArray:_homeServiceArray];
         return cell;
-        
     }else{
         return nil;
+        
+        
     }
+    
+    
 }
-
-
 #pragma mark - JFHomeServiceCellDelegate
 -(void)homeServiceCellTapClick:(long )index{
     JFLog(@"%ld", index-10);
@@ -205,6 +214,10 @@
     
     
 }
+
+
+
+
 
 
 @end

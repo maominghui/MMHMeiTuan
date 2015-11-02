@@ -17,6 +17,8 @@
 
 -(void)setImageArray:(NSArray *)imageArray;
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier frame:(CGRect)frame;
+-(instancetype)initWithStyle:(UITableViewCellStyle)style
+             reuseIdentifier:(NSString *)reuseIdentifier
+                       frame:(CGRect)frame;
 
 @end
