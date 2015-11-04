@@ -8,15 +8,25 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+
 #import "MMHHomeMenuCell.h"
 
+#import "MMHRushDataModel.h"
+#import "MMHRushDealsModel.h"
+#import "MMHDiscountCell.h"
+#import "MMHDiscountModel.h"
+#import "MMHHotQueueCell.h"
+#import "MMHHotQueueModel.h"
+#import "MMHGuessCell.h"
+#import "MMHRecommentCell.h"
+#import "MMHRecommentModel.h"
 
 #import "MMHSelectAddressView.h"
 #import "MMHAddressScrollView.h"
-#import "MMHRushDataModel.h"
-#import "MMHRushDealsModel.h"
 
-@interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHHomeMenuCellDelegate>
+#import "MMHMenuViewController.h"
+
+@interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHSelectAddressViewTapDelegate,MMHAddressScrollViewButtonDelegate,MMHChangeCityButtonDelegate,MMHDiscountCellDelegate,MMHHomeMenuCellDelegate>
 
 @property(nonatomic, strong)UITableView *firstTableView;
 @property(nonatomic, strong)NSArray *menuArray;
@@ -28,6 +38,7 @@
     NSMutableArray *_rushArray;
     NSMutableArray *_discountArray;
     NSMutableArray *_recommentArray;
+    MMHHotQueueModel *_hotQueueModel;
 }
 
 -(void)viewDidLoad{
@@ -40,6 +51,8 @@
     [self initData];
     //加载城市数据
     [self laodCityData];
+    //下拉刷新
+    [self setRefreshIntableView];
     
 }
 
@@ -84,7 +97,7 @@
     
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
     searchBar.backgroundImage = [UIImage imageNamed:@"icon_homepage_search"];
-    searchBar.placeholder = @"优衣库";
+    searchBar.placeholder = @"MMH的美团App";
     self.navigationItem.titleView = searchBar;
     
     self.selectAddressView =   [[MMHSelectAddressView alloc]initWithFrame:CGRectMake(0, 0 ,SCREENWIDTH, SCREENHEIGHT )];
@@ -113,6 +126,36 @@
     button.selected = !button.selected;
     self.selectAddressView.hidden = !self.selectAddressView.hidden;
 }
+
+#pragma mark - 设置下啦刷新
+-(void)setRefreshIntableView{
+    [self.firstTableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    
+    //设置普通状态的动画图片
+    NSMutableArray *idleImages = [NSMutableArray array];
+    for (NSUInteger i = 1; i<=60; ++i) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
+        [idleImages addObject:image];
+    }
+    [self.firstTableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+    
+    //设置即将刷新状态的动画图片
+    NSMutableArray *refreshingImages = [NSMutableArray array];
+    for (NSInteger i = 1; i<=3; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
+        [refreshingImages addObject:image];
+    }
+    [self.firstTableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+    
+    //设置正在刷新是的动画图片
+    [self.firstTableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+    
+    //马上进入刷新状态
+    [self.firstTableView.gifHeader beginRefreshing];
+    
+    
+}
+
 #pragma mark - MMHSelectAddressViewTapDelegate
 -(void)removeMaskView{
     self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
@@ -129,7 +172,12 @@
 -(void)changeCityButtonClick:(UIButton *)button{
     self.selectAddressView.hidden = !self.selectAddressView.hidden;
     
+    
 }
+
+#pragma mark - MMHRushBuyCellDelegate
+
+
 /*
  * 在刷新数据里面请求 并用GCD开辟另一个线程
  */

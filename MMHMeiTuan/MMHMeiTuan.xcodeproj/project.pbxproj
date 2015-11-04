@@ -36,6 +36,8 @@
 		921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B8BA11BDA117100DFFFDD /* MMHRushDealsModel.m */; settings = {ASSET_TAGS = (); }; };
 		9286DB891BE8ADE800F93FA6 /* MMHHotQueueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286DB871BE8ADE700F93FA6 /* MMHHotQueueCell.m */; settings = {ASSET_TAGS = (); }; };
 		9286DB8A1BE8ADE800F93FA6 /* MMHHotQueueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9286DB881BE8ADE700F93FA6 /* MMHHotQueueCell.xib */; settings = {ASSET_TAGS = (); }; };
+		9286DB911BE9A13000F93FA6 /* MMHRecommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286DB8F1BE9A13000F93FA6 /* MMHRecommentCell.m */; settings = {ASSET_TAGS = (); }; };
+		9286DB921BE9A13000F93FA6 /* MMHRecommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9286DB901BE9A13000F93FA6 /* MMHRecommentCell.xib */; settings = {ASSET_TAGS = (); }; };
 		92ABABD51BDA333C00030F81 /* MMHMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABABD41BDA333C00030F81 /* MMHMoreCell.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BDD1BDDF90300E36012 /* MMHServiceAdModel.m */; settings = {ASSET_TAGS = (); }; };
 		92B51BE11BDDFC1400E36012 /* MMHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B51BE01BDDFC1400E36012 /* MMHWebViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -1490,6 +1492,9 @@
 		9286DB861BE8ADE700F93FA6 /* MMHHotQueueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHHotQueueCell.h; sourceTree = "<group>"; };
 		9286DB871BE8ADE700F93FA6 /* MMHHotQueueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHHotQueueCell.m; sourceTree = "<group>"; };
 		9286DB881BE8ADE700F93FA6 /* MMHHotQueueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHHotQueueCell.xib; sourceTree = "<group>"; };
+		9286DB8E1BE9A13000F93FA6 /* MMHRecommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHRecommentCell.h; sourceTree = "<group>"; };
+		9286DB8F1BE9A13000F93FA6 /* MMHRecommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHRecommentCell.m; sourceTree = "<group>"; };
+		9286DB901BE9A13000F93FA6 /* MMHRecommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHRecommentCell.xib; sourceTree = "<group>"; };
 		92ABABD31BDA333C00030F81 /* MMHMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMoreCell.h; sourceTree = "<group>"; };
 		92ABABD41BDA333C00030F81 /* MMHMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMoreCell.m; sourceTree = "<group>"; };
 		92B51BDC1BDDF90300E36012 /* MMHServiceAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHServiceAdModel.h; sourceTree = "<group>"; };
@@ -3088,6 +3093,9 @@
 				9286DB861BE8ADE700F93FA6 /* MMHHotQueueCell.h */,
 				9286DB871BE8ADE700F93FA6 /* MMHHotQueueCell.m */,
 				9286DB881BE8ADE700F93FA6 /* MMHHotQueueCell.xib */,
+				9286DB8E1BE9A13000F93FA6 /* MMHRecommentCell.h */,
+				9286DB8F1BE9A13000F93FA6 /* MMHRecommentCell.m */,
+				9286DB901BE9A13000F93FA6 /* MMHRecommentCell.xib */,
 			);
 			name = CellView;
 			sourceTree = "<group>";
@@ -6014,6 +6022,7 @@
 				92D8790C1BCE4353009D6A1C /* bg_orderReview_nodeImage_highlighted.png in Resources */,
 				92D8793B1BCE4353009D6A1C /* bg_uploadimage_addimage@2x.png in Resources */,
 				92D87C791BCE4353009D6A1C /* merchant_head_backround@2x.png in Resources */,
+				9286DB921BE9A13000F93FA6 /* MMHRecommentCell.xib in Resources */,
 				92D879BA1BCE4353009D6A1C /* button_actionSheet_selected.png in Resources */,
 				92D87C031BCE4353009D6A1C /* icon_route_transfer_car@2x.png in Resources */,
 				92D87C0C1BCE4353009D6A1C /* icon_search_glass@2x.png in Resources */,
@@ -7074,6 +7083,7 @@
 				92B51C281BE0CF0100E36012 /* UIScrollView+MJRefresh.m in Sources */,
 				92F5FD281BD09B4C00F6E656 /* SDWebImageDecoder.m in Sources */,
 				92B51BEF1BDF4F1800E36012 /* MMHMineBigTitleCell.m in Sources */,
+				9286DB911BE9A13000F93FA6 /* MMHRecommentCell.m in Sources */,
 				921B8B991BD8CFCB00DFFFDD /* MMHShopDatailDataModel.m in Sources */,
 				92B51C1F1BE0CF0100E36012 /* MJRefreshComponent.m in Sources */,
 				92F5FD171BD09B4C00F6E656 /* AFNetworkReachabilityManager.m in Sources */,
