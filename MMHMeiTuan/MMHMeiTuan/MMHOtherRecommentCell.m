@@ -1,16 +1,14 @@
 //
-//  MMHRushBuyCell.m
+//  MMHOtherRecommentCell.m
 //  MMHMeiTuan
 //
-//  Created by 茆明辉 on 15/11/5.
+//  Created by 茆明辉 on 15/11/11.
 //  Copyright © 2015年 com.nyist. All rights reserved.
 //
 
-#import "MMHRushBuyCell.h"
-#import "MMHRushDataModel.h"
-#import "MMHRushDealsModel.h"
+#import "MMHOtherRecommentCell.h"
 
-@implementation MMHRushBuyCell
+@implementation MMHOtherRecommentCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -23,4 +21,3 @@
 }
 
 @end
-

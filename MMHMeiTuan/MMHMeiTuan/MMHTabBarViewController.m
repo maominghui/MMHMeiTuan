@@ -80,7 +80,10 @@
     
 }
 
--(void)setupChildViewController:(UIViewController*)controller title:(NSString *)title imageName:(NSString *)imageName seleceImageName:(NSString *)selectImageName{
+-(void)setupChildViewController:(UIViewController*)controller
+                          title:(NSString *)title
+                      imageName:(NSString *)imageName
+                seleceImageName:(NSString *)selectImageName{
     //    controller.title = title;
     controller.tabBarItem.title = title;//跟上面一样效果
     controller.tabBarItem.image = [UIImage imageNamed:imageName];
