@@ -8,6 +8,13 @@
 
 #import "MMHMoreCell.h"
 
+@interface MMHMoreCell ()
+{
+    UILabel *lbl;
+}
+@end
+
+
 @implementation MMHMoreCell
 
 - (void)awakeFromNib {
@@ -31,6 +38,11 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+
+- (void)setSubText:(NSString*)str
+{
+    lbl.text = str;
 }
 
 @end

@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 @class MMHHomeServiceModel;
 @interface GetUrlString : NSObject
+
+/**
+ *  toast
+ */
+- (void)showtoast:(NSString *)toastStr;
 /**
  *  获取URL的单例
  */

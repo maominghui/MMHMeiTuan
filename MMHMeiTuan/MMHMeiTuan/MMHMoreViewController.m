@@ -17,9 +17,13 @@
 #define NightCellHeaderTextColor [UIColor colorWithRed:75 / 255.0 green:75 / 255.0 blue:75 / 255.0 alpha:1] // #4B4B4B
 
 @interface MMHMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+{
+      NSArray     *arrNames;
+     __block UITableView *tbView;
+}
 @property(nonatomic, strong)UITableView *moreTableView;
 @property(nonatomic,strong)NSArray *moreModelArray;
+
 @end
 
 @implementation MMHMoreViewController
@@ -32,6 +36,9 @@
     //初始化
     [self initView];
     [self loadMoreMenuData];
+    
+    self.moreTableView.backgroundColor = DawnViewBGColor;
+    self.moreTableView.nightBackgroundColor = NightBGViewColor;
     // Do any additional setup after loading the view.
 }
 
@@ -89,6 +96,37 @@
         cell.accessoryView = nightModeSwitch;
         }
     }
+    else if (indexPath.row == 4)
+    {
+        
+        NSArray* arr = (NSArray*)[arrNames objectAtIndex:indexPath.section];
+        cell.textLabel.text = [arr objectAtIndex:indexPath.row];
+        cell.textLabel.font = [UIFont systemFontOfSize:13];
+        cell.textLabel.textColor = [UIColor blackColor];
+        
+        NSString *bundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+        
+        
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:bundleId];
+        CGFloat size = [self folderSizeAtPath:path];
+        if(size > 10)
+        {
+            if(size < 1000)
+            {
+                [cell setSubText:[NSString stringWithFormat:@"%.0f B",size]];
+            }
+            else if(size < 1000 * 1000)
+            {
+                [cell setSubText:[NSString stringWithFormat:@"%.2f KB",size / 1000]];
+            }
+            else
+            {
+                [cell setSubText:[NSString stringWithFormat:@"%.2f MB",size / 1000 / 1000]];
+            }
+        }
+    }
     cell.backgroundColor = DawnCellBGColor;
     cell.nightBackgroundColor = NightCellBGColor;
     return cell;
@@ -97,8 +135,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
         if (indexPath.row == 4) {
-            //清空缓存
+            NSString *bundled = [[[NSBundle mainBundle]infoDictionary]objectForKey:@"CFBundleIdentifier"];
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+            NSString *path = [[paths objectAtIndex:0]stringByAppendingPathComponent:bundled];
+            [[NSFileManager defaultManager]removeItemAtPath:path error:nil];
             
+            [[GetUrlString sharedManager]showtoast:@"清除缓存成功"];
+            
+            
+            [tbView reloadData];
         }
     }
     if (indexPath.section == 2) {
@@ -157,6 +202,28 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+#pragma mark - 获得文件大小
+- (long long) fileSizeAtPath:(NSString*) filePath{
+    NSFileManager* manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePath]){
+        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+    }
+    return 0;
+}
+
+- (float ) folderSizeAtPath:(NSString*) folderPath{
+    NSFileManager* manager = [NSFileManager defaultManager];
+    if (![manager fileExistsAtPath:folderPath]) return 0;
+    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
+    NSString* fileName;
+    long long folderSize = 0;
+    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+        NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
+        folderSize += [self fileSizeAtPath:fileAbsolutePath];
+    }
+    return folderSize;
 }
 
 @end

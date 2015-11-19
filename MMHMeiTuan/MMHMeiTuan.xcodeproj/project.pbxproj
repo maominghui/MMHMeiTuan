@@ -1436,6 +1436,9 @@
 		92DCF3681BFDC1A30067C154 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3411BFDC1A30067C154 /* property.json */; };
 		92DCF3691BFDC1A30067C154 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3421BFDC1A30067C154 /* Rakefile */; };
 		92DCF36A1BFDC1A30067C154 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3431BFDC1A30067C154 /* README.md */; };
+		92DCF3701BFDCF9B0067C154 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF36C1BFDCF9B0067C154 /* LICENSE */; };
+		92DCF3711BFDCF9B0067C154 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF36E1BFDCF9B0067C154 /* MBProgressHUD.m */; };
+		92DCF3721BFDCF9B0067C154 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF36F1BFDCF9B0067C154 /* README.mdown */; };
 		92EC32141BF31AA400B823E0 /* MMHAllCityNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC32131BF31AA400B823E0 /* MMHAllCityNameCell.m */; };
 		92EC32221BF3205900B823E0 /* MMHCityTitleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC32201BF3205900B823E0 /* MMHCityTitleHeaderView.m */; };
 		92EC32231BF3205900B823E0 /* MMHCityTitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92EC32211BF3205900B823E0 /* MMHCityTitleHeaderView.xib */; };
@@ -3081,6 +3084,10 @@
 		92DCF3411BFDC1A30067C154 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = "<group>"; };
 		92DCF3421BFDC1A30067C154 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		92DCF3431BFDC1A30067C154 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		92DCF36C1BFDCF9B0067C154 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		92DCF36D1BFDCF9B0067C154 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		92DCF36E1BFDCF9B0067C154 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		92DCF36F1BFDCF9B0067C154 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		92EC32121BF31AA400B823E0 /* MMHAllCityNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHAllCityNameCell.h; sourceTree = "<group>"; };
 		92EC32131BF31AA400B823E0 /* MMHAllCityNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHAllCityNameCell.m; sourceTree = "<group>"; };
 		92EC321F1BF3205900B823E0 /* MMHCityTitleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHCityTitleHeaderView.h; sourceTree = "<group>"; };
@@ -3469,6 +3476,7 @@
 		92D871CE1BCE36DA009D6A1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92DCF36B1BFDCF9B0067C154 /* MBProgressHUD */,
 				92DCF2F61BFDC1A30067C154 /* DKNightVersion */,
 				92CBD7F81BE751A300AD0C94 /* IQKeyBoardManager */,
 				92B51C051BE0CF0100E36012 /* MJRefresh */,
@@ -5810,6 +5818,17 @@
 			path = template;
 			sourceTree = "<group>";
 		};
+		92DCF36B1BFDCF9B0067C154 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF36C1BFDCF9B0067C154 /* LICENSE */,
+				92DCF36D1BFDCF9B0067C154 /* MBProgressHUD.h */,
+				92DCF36E1BFDCF9B0067C154 /* MBProgressHUD.m */,
+				92DCF36F1BFDCF9B0067C154 /* README.mdown */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		92EC32291BF337D200B823E0 /* ShopDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -7125,6 +7144,7 @@
 				92D87C2A1BCE4353009D6A1C /* icon_tabbar_homepage_selected.png in Resources */,
 				92D87B5C1BCE4353009D6A1C /* icon_mine_level6user@2x.png in Resources */,
 				92D87BF21BCE4353009D6A1C /* icon_route_bus.png in Resources */,
+				92DCF3701BFDCF9B0067C154 /* LICENSE in Resources */,
 				92D8783B1BCE4353009D6A1C /* about_criticism@2x.png in Resources */,
 				92D87AC71BCE4353009D6A1C /* icon_homepage_guess_default.jpg in Resources */,
 				92D879891BCE4353009D6A1C /* btn_grey@2x.png in Resources */,
@@ -7478,6 +7498,7 @@
 				92CBD81D1BE751A300AD0C94 /* IQNSArray+Sort.m in Sources */,
 				921B8B901BD8CE7000DFFFDD /* MMHDiscountModel.m in Sources */,
 				92DCF3561BFDC1A30067C154 /* UIView+NightVersion.m in Sources */,
+				92DCF3721BFDCF9B0067C154 /* README.mdown in Sources */,
 				92CBD81F1BE751A300AD0C94 /* IQUIView+Hierarchy.m in Sources */,
 				92F5FCB41BCF4EBE00F6E656 /* MMHMultipleButtonView.m in Sources */,
 				92DCF3461BFDC1A30067C154 /* DKNightVersionUtility.m in Sources */,
@@ -7510,6 +7531,7 @@
 				92B51BDE1BDDF90300E36012 /* MMHServiceAdModel.m in Sources */,
 				92B51C231BE0CF0100E36012 /* MJRefreshGifHeader.m in Sources */,
 				92B51C271BE0CF0100E36012 /* UIScrollView+MJExtension.m in Sources */,
+				92DCF3711BFDCF9B0067C154 /* MBProgressHUD.m in Sources */,
 				92F5FD321BD09B4C00F6E656 /* UIView+WebCacheOperation.m in Sources */,
 				92B51BE41BDE224200E36012 /* MMHHomeServiceCell.m in Sources */,
 				92D871AB1BCE35CC009D6A1C /* AppDelegate.m in Sources */,

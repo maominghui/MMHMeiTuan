@@ -10,6 +10,13 @@
 #import "AppDelegate.h"
 #import "MMHHomeServiceModel.h"
 
+@interface GetUrlString(){
+    MBProgressHUD *toastHud;
+    MBProgressHUD *progressHud;
+}
+
+@end
+
 @implementation GetUrlString
 
 +(GetUrlString *)sharedManager{
@@ -17,8 +24,55 @@
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
         shareUrl = [[self alloc]init];
+        [shareUrl actionRenderUIComponents];
     });
     return shareUrl;
+}
+
+#pragma mark -toast
+- (void)showtoast:(NSString *)toastStr {
+    if (toastStr.length > 0) {
+        if (toastStr.length > 15) {
+            toastHud.labelText = @"";
+            toastHud.detailsLabelText = toastStr;
+        } else {
+            toastHud.labelText = toastStr;
+            toastHud.detailsLabelText = @"";
+        }
+        [[GetUrlString keyWindow] bringSubviewToFront:toastHud];
+        [toastHud show:YES];
+        [toastHud hide:YES];
+    }
+}
+
+#pragma mark -keyWindow
++ (UIWindow *)keyWindow {
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIWindow *keywindow = delegate.window;
+    return keywindow;
+}
+
+#pragma mark -actionRenderUIComponents
+- (void)actionRenderUIComponents {
+    UIWindow *keywindow = [GetUrlString keyWindow];
+    toastHud = [[MBProgressHUD alloc] initWithWindow:keywindow];
+    toastHud.minSize = CGSizeMake(220, 60);
+    toastHud.userInteractionEnabled = NO;
+    toastHud.mode = MBProgressHUDModeText;
+    toastHud.minShowTime = minshowtime*2;
+    toastHud.color = NightBGViewColor;
+    toastHud.alpha = 0.3;
+    [keywindow addSubview:toastHud];
+    progressHud = [[MBProgressHUD alloc] initWithWindow:keywindow];
+    progressHud.animationType = MBProgressHUDAnimationFade;
+    //progressHud.mode = MBProgressHUDModeCustomView;
+    progressHud.userInteractionEnabled = YES;
+    progressHud.minShowTime = minshowtime;
+    progressHud.labelText = @"加载中...";
+    progressHud.square = YES;
+    //annurImageView = [[XiangQuAnnurImageView alloc] initWithFrame:CGRectMake(0, 0, 45, 45)];
+    //progressHud.customView = annurImageView;
+    [keywindow addSubview:progressHud];
 }
 
 -(NSString *)urlWithRushBuy{

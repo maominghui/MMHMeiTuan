@@ -47,7 +47,7 @@
 //搜索文件
 #define JFSearchHistoryPath [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"hisDatas.data"]
 
-
+#define minshowtime   0.5
 
 #import "NetWork.h"
 #import "GetUrlString.h"
@@ -63,5 +63,6 @@
 #import "IQKeyboardManager.h"
 #import "AppConfigure.h"
 #import "DKNightVersion.h"
+#import "MBProgressHUD.h"
 
 #endif

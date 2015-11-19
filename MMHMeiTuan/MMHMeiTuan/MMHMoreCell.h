@@ -14,5 +14,5 @@
                        indexPath:(NSIndexPath *)indexPath
                        moreArray:(NSArray *)moreArray;
 
-
+- (void)setSubText:(NSString*)str;
 @end
