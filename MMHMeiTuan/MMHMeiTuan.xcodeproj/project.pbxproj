@@ -1392,6 +1392,50 @@
 		92D87CDA1BCE493D009D6A1C /* MMHAddressScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D87CD91BCE493D009D6A1C /* MMHAddressScrollView.m */; };
 		92D87CDC1BCE496A009D6A1C /* MMHAddressScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D87CDB1BCE496A009D6A1C /* MMHAddressScrollView.xib */; };
 		92D87CDF1BCE52F8009D6A1C /* GetPlistArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D87CDE1BCE52F8009D6A1C /* GetPlistArray.m */; };
+		92DCF2641BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2621BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.m */; };
+		92DCF2651BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF2631BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.xib */; };
+		92DCF2691BFDA6350067C154 /* MMHShopDetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2671BFDA6350067C154 /* MMHShopDetailImageCell.m */; };
+		92DCF26A1BFDA6350067C154 /* MMHShopDetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF2681BFDA6350067C154 /* MMHShopDetailImageCell.xib */; };
+		92DCF2E21BFDB33E0067C154 /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E11BFDB33E0067C154 /* AppConfigure.m */; };
+		92DCF3441BFDC1A30067C154 /* UIViewController+ChangeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FA1BFDC1A30067C154 /* UIViewController+ChangeColor.m */; };
+		92DCF3451BFDC1A30067C154 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FD1BFDC1A30067C154 /* DKNightVersionManager.m */; };
+		92DCF3461BFDC1A30067C154 /* DKNightVersionUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3011BFDC1A30067C154 /* DKNightVersionUtility.m */; };
+		92DCF3471BFDC1A30067C154 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3031BFDC1A30067C154 /* UINavigationBar+Animation.m */; };
+		92DCF3481BFDC1A30067C154 /* UIBarButtonItem+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3071BFDC1A30067C154 /* UIBarButtonItem+NightVersion.m */; };
+		92DCF3491BFDC1A30067C154 /* UIBarButtonItem+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3091BFDC1A30067C154 /* UIBarButtonItem+TintColor.m */; };
+		92DCF34A1BFDC1A30067C154 /* UIButton+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF30C1BFDC1A30067C154 /* UIButton+NightVersion.m */; };
+		92DCF34B1BFDC1A30067C154 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF30E1BFDC1A30067C154 /* UIButton+TitleColor.m */; };
+		92DCF34C1BFDC1A30067C154 /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3111BFDC1A30067C154 /* UILabel+NightVersion.m */; };
+		92DCF34D1BFDC1A30067C154 /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3131BFDC1A30067C154 /* UILabel+TextColor.m */; };
+		92DCF34E1BFDC1A30067C154 /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3161BFDC1A30067C154 /* UINavigationBar+BarTintColor.m */; };
+		92DCF34F1BFDC1A30067C154 /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3181BFDC1A30067C154 /* UINavigationBar+NightVersion.m */; };
+		92DCF3501BFDC1A30067C154 /* UINavigationBar+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF31A1BFDC1A30067C154 /* UINavigationBar+TintColor.m */; };
+		92DCF3511BFDC1A30067C154 /* UITabBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF31D1BFDC1A30067C154 /* UITabBar+BarTintColor.m */; };
+		92DCF3521BFDC1A30067C154 /* UITabBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF31F1BFDC1A30067C154 /* UITabBar+NightVersion.m */; };
+		92DCF3531BFDC1A30067C154 /* UITableView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3221BFDC1A30067C154 /* UITableView+NightVersion.m */; };
+		92DCF3541BFDC1A30067C154 /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3241BFDC1A30067C154 /* UITableView+SeparatorColor.m */; };
+		92DCF3551BFDC1A30067C154 /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3271BFDC1A30067C154 /* UIView+BackgroundColor.m */; };
+		92DCF3561BFDC1A30067C154 /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3291BFDC1A30067C154 /* UIView+NightVersion.m */; };
+		92DCF3571BFDC1A30067C154 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF32A1BFDC1A30067C154 /* Gemfile */; };
+		92DCF3581BFDC1A30067C154 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF32B1BFDC1A30067C154 /* Gemfile.lock */; };
+		92DCF3591BFDC1A30067C154 /* method.json in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3301BFDC1A30067C154 /* method.json */; };
+		92DCF35A1BFDC1A30067C154 /* project.json in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3311BFDC1A30067C154 /* project.json */; };
+		92DCF35B1BFDC1A30067C154 /* superklass.json in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3321BFDC1A30067C154 /* superklass.json */; };
+		92DCF35C1BFDC1A30067C154 /* objc_class.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3341BFDC1A30067C154 /* objc_class.rb */; };
+		92DCF35D1BFDC1A30067C154 /* objc_property.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3351BFDC1A30067C154 /* objc_property.rb */; };
+		92DCF35E1BFDC1A30067C154 /* parser.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3361BFDC1A30067C154 /* parser.rb */; };
+		92DCF35F1BFDC1A30067C154 /* project.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3371BFDC1A30067C154 /* project.rb */; };
+		92DCF3601BFDC1A30067C154 /* render.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3381BFDC1A30067C154 /* render.rb */; };
+		92DCF3611BFDC1A30067C154 /* color.h.erb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF33A1BFDC1A30067C154 /* color.h.erb */; };
+		92DCF3621BFDC1A30067C154 /* color.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF33B1BFDC1A30067C154 /* color.m.erb */; };
+		92DCF3631BFDC1A30067C154 /* nightversion.h.erb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF33C1BFDC1A30067C154 /* nightversion.h.erb */; };
+		92DCF3641BFDC1A30067C154 /* nightversion.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF33D1BFDC1A30067C154 /* nightversion.m.erb */; };
+		92DCF3651BFDC1A30067C154 /* xcodeproj.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF33E1BFDC1A30067C154 /* xcodeproj.rb */; };
+		92DCF3661BFDC1A30067C154 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF33F1BFDC1A30067C154 /* generator.rb */; };
+		92DCF3671BFDC1A30067C154 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3401BFDC1A30067C154 /* LICENSE */; };
+		92DCF3681BFDC1A30067C154 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3411BFDC1A30067C154 /* property.json */; };
+		92DCF3691BFDC1A30067C154 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF3421BFDC1A30067C154 /* Rakefile */; };
+		92DCF36A1BFDC1A30067C154 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF3431BFDC1A30067C154 /* README.md */; };
 		92EC32141BF31AA400B823E0 /* MMHAllCityNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC32131BF31AA400B823E0 /* MMHAllCityNameCell.m */; };
 		92EC32221BF3205900B823E0 /* MMHCityTitleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC32201BF3205900B823E0 /* MMHCityTitleHeaderView.m */; };
 		92EC32231BF3205900B823E0 /* MMHCityTitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92EC32211BF3205900B823E0 /* MMHCityTitleHeaderView.xib */; };
@@ -2970,6 +3014,73 @@
 		92D87CDE1BCE52F8009D6A1C /* GetPlistArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPlistArray.m; sourceTree = "<group>"; };
 		92D87CE01BCE5784009D6A1C /* MMHPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHPrefixHeader.pch; sourceTree = "<group>"; };
 		92D87CE11BCE57C7009D6A1C /* MMHMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMacro.h; sourceTree = "<group>"; };
+		92DCF2611BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHShopDetailBackAnyTimeCell.h; sourceTree = "<group>"; };
+		92DCF2621BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHShopDetailBackAnyTimeCell.m; sourceTree = "<group>"; };
+		92DCF2631BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHShopDetailBackAnyTimeCell.xib; sourceTree = "<group>"; };
+		92DCF2661BFDA6350067C154 /* MMHShopDetailImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHShopDetailImageCell.h; sourceTree = "<group>"; };
+		92DCF2671BFDA6350067C154 /* MMHShopDetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHShopDetailImageCell.m; sourceTree = "<group>"; };
+		92DCF2681BFDA6350067C154 /* MMHShopDetailImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHShopDetailImageCell.xib; sourceTree = "<group>"; };
+		92DCF2E01BFDB33E0067C154 /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
+		92DCF2E11BFDB33E0067C154 /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
+		92DCF2F91BFDC1A30067C154 /* UIViewController+ChangeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChangeColor.h"; sourceTree = "<group>"; };
+		92DCF2FA1BFDC1A30067C154 /* UIViewController+ChangeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChangeColor.m"; sourceTree = "<group>"; };
+		92DCF2FC1BFDC1A30067C154 /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
+		92DCF2FD1BFDC1A30067C154 /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManager.m; sourceTree = "<group>"; };
+		92DCF2FE1BFDC1A30067C154 /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersion.h; sourceTree = "<group>"; };
+		92DCF3001BFDC1A30067C154 /* DKNightVersionUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionUtility.h; sourceTree = "<group>"; };
+		92DCF3011BFDC1A30067C154 /* DKNightVersionUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionUtility.m; sourceTree = "<group>"; };
+		92DCF3021BFDC1A30067C154 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Animation.h"; sourceTree = "<group>"; };
+		92DCF3031BFDC1A30067C154 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Animation.m"; sourceTree = "<group>"; };
+		92DCF3061BFDC1A30067C154 /* UIBarButtonItem+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF3071BFDC1A30067C154 /* UIBarButtonItem+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF3081BFDC1A30067C154 /* UIBarButtonItem+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TintColor.h"; sourceTree = "<group>"; };
+		92DCF3091BFDC1A30067C154 /* UIBarButtonItem+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TintColor.m"; sourceTree = "<group>"; };
+		92DCF30B1BFDC1A30067C154 /* UIButton+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF30C1BFDC1A30067C154 /* UIButton+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF30D1BFDC1A30067C154 /* UIButton+TitleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TitleColor.h"; sourceTree = "<group>"; };
+		92DCF30E1BFDC1A30067C154 /* UIButton+TitleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TitleColor.m"; sourceTree = "<group>"; };
+		92DCF3101BFDC1A30067C154 /* UILabel+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF3111BFDC1A30067C154 /* UILabel+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF3121BFDC1A30067C154 /* UILabel+TextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextColor.h"; sourceTree = "<group>"; };
+		92DCF3131BFDC1A30067C154 /* UILabel+TextColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextColor.m"; sourceTree = "<group>"; };
+		92DCF3151BFDC1A30067C154 /* UINavigationBar+BarTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+BarTintColor.h"; sourceTree = "<group>"; };
+		92DCF3161BFDC1A30067C154 /* UINavigationBar+BarTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BarTintColor.m"; sourceTree = "<group>"; };
+		92DCF3171BFDC1A30067C154 /* UINavigationBar+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF3181BFDC1A30067C154 /* UINavigationBar+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF3191BFDC1A30067C154 /* UINavigationBar+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TintColor.h"; sourceTree = "<group>"; };
+		92DCF31A1BFDC1A30067C154 /* UINavigationBar+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TintColor.m"; sourceTree = "<group>"; };
+		92DCF31C1BFDC1A30067C154 /* UITabBar+BarTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+BarTintColor.h"; sourceTree = "<group>"; };
+		92DCF31D1BFDC1A30067C154 /* UITabBar+BarTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+BarTintColor.m"; sourceTree = "<group>"; };
+		92DCF31E1BFDC1A30067C154 /* UITabBar+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF31F1BFDC1A30067C154 /* UITabBar+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF3211BFDC1A30067C154 /* UITableView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF3221BFDC1A30067C154 /* UITableView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF3231BFDC1A30067C154 /* UITableView+SeparatorColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SeparatorColor.h"; sourceTree = "<group>"; };
+		92DCF3241BFDC1A30067C154 /* UITableView+SeparatorColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SeparatorColor.m"; sourceTree = "<group>"; };
+		92DCF3261BFDC1A30067C154 /* UIView+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BackgroundColor.h"; sourceTree = "<group>"; };
+		92DCF3271BFDC1A30067C154 /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackgroundColor.m"; sourceTree = "<group>"; };
+		92DCF3281BFDC1A30067C154 /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
+		92DCF3291BFDC1A30067C154 /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
+		92DCF32A1BFDC1A30067C154 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		92DCF32B1BFDC1A30067C154 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		92DCF3301BFDC1A30067C154 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
+		92DCF3311BFDC1A30067C154 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
+		92DCF3321BFDC1A30067C154 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
+		92DCF3341BFDC1A30067C154 /* objc_class.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objc_class.rb; sourceTree = "<group>"; };
+		92DCF3351BFDC1A30067C154 /* objc_property.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objc_property.rb; sourceTree = "<group>"; };
+		92DCF3361BFDC1A30067C154 /* parser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = parser.rb; sourceTree = "<group>"; };
+		92DCF3371BFDC1A30067C154 /* project.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = project.rb; sourceTree = "<group>"; };
+		92DCF3381BFDC1A30067C154 /* render.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = render.rb; sourceTree = "<group>"; };
+		92DCF33A1BFDC1A30067C154 /* color.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.h.erb; sourceTree = "<group>"; };
+		92DCF33B1BFDC1A30067C154 /* color.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.m.erb; sourceTree = "<group>"; };
+		92DCF33C1BFDC1A30067C154 /* nightversion.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.h.erb; sourceTree = "<group>"; };
+		92DCF33D1BFDC1A30067C154 /* nightversion.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.m.erb; sourceTree = "<group>"; };
+		92DCF33E1BFDC1A30067C154 /* xcodeproj.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = xcodeproj.rb; sourceTree = "<group>"; };
+		92DCF33F1BFDC1A30067C154 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
+		92DCF3401BFDC1A30067C154 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		92DCF3411BFDC1A30067C154 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = "<group>"; };
+		92DCF3421BFDC1A30067C154 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		92DCF3431BFDC1A30067C154 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		92EC32121BF31AA400B823E0 /* MMHAllCityNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHAllCityNameCell.h; sourceTree = "<group>"; };
 		92EC32131BF31AA400B823E0 /* MMHAllCityNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHAllCityNameCell.m; sourceTree = "<group>"; };
 		92EC321F1BF3205900B823E0 /* MMHCityTitleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHCityTitleHeaderView.h; sourceTree = "<group>"; };
@@ -3358,6 +3469,7 @@
 		92D871CE1BCE36DA009D6A1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92DCF2F61BFDC1A30067C154 /* DKNightVersion */,
 				92CBD7F81BE751A300AD0C94 /* IQKeyBoardManager */,
 				92B51C051BE0CF0100E36012 /* MJRefresh */,
 				92F5FCD01BD09B4C00F6E656 /* AFNetworking */,
@@ -3471,6 +3583,8 @@
 				921B8B5D1BD0FDAF00DFFFDD /* GetUrlString.m */,
 				921B8B6C1BD5DF3F00DFFFDD /* NetWork.h */,
 				921B8B6D1BD5DF3F00DFFFDD /* NetWork.m */,
+				92DCF2E01BFDB33E0067C154 /* AppConfigure.h */,
+				92DCF2E11BFDB33E0067C154 /* AppConfigure.m */,
 			);
 			name = "工具类";
 			sourceTree = "<group>";
@@ -5486,6 +5600,216 @@
 			name = SeletAddressView;
 			sourceTree = "<group>";
 		};
+		92DCF2F61BFDC1A30067C154 /* DKNightVersion */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2F71BFDC1A30067C154 /* Classes */,
+				92DCF32A1BFDC1A30067C154 /* Gemfile */,
+				92DCF32B1BFDC1A30067C154 /* Gemfile.lock */,
+				92DCF32C1BFDC1A30067C154 /* generator */,
+				92DCF3401BFDC1A30067C154 /* LICENSE */,
+				92DCF3411BFDC1A30067C154 /* property.json */,
+				92DCF3421BFDC1A30067C154 /* Rakefile */,
+				92DCF3431BFDC1A30067C154 /* README.md */,
+			);
+			path = DKNightVersion;
+			sourceTree = "<group>";
+		};
+		92DCF2F71BFDC1A30067C154 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2F81BFDC1A30067C154 /* Controller */,
+				92DCF2FB1BFDC1A30067C154 /* Core */,
+				92DCF2FE1BFDC1A30067C154 /* DKNightVersion.h */,
+				92DCF2FF1BFDC1A30067C154 /* Helper */,
+				92DCF3041BFDC1A30067C154 /* UIKit */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		92DCF2F81BFDC1A30067C154 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2F91BFDC1A30067C154 /* UIViewController+ChangeColor.h */,
+				92DCF2FA1BFDC1A30067C154 /* UIViewController+ChangeColor.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92DCF2FB1BFDC1A30067C154 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2FC1BFDC1A30067C154 /* DKNightVersionManager.h */,
+				92DCF2FD1BFDC1A30067C154 /* DKNightVersionManager.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		92DCF2FF1BFDC1A30067C154 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3001BFDC1A30067C154 /* DKNightVersionUtility.h */,
+				92DCF3011BFDC1A30067C154 /* DKNightVersionUtility.m */,
+				92DCF3021BFDC1A30067C154 /* UINavigationBar+Animation.h */,
+				92DCF3031BFDC1A30067C154 /* UINavigationBar+Animation.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		92DCF3041BFDC1A30067C154 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3051BFDC1A30067C154 /* UIBarButtonItem */,
+				92DCF30A1BFDC1A30067C154 /* UIButton */,
+				92DCF30F1BFDC1A30067C154 /* UILabel */,
+				92DCF3141BFDC1A30067C154 /* UINavigationBar */,
+				92DCF31B1BFDC1A30067C154 /* UITabBar */,
+				92DCF3201BFDC1A30067C154 /* UITableView */,
+				92DCF3251BFDC1A30067C154 /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		92DCF3051BFDC1A30067C154 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3061BFDC1A30067C154 /* UIBarButtonItem+NightVersion.h */,
+				92DCF3071BFDC1A30067C154 /* UIBarButtonItem+NightVersion.m */,
+				92DCF3081BFDC1A30067C154 /* UIBarButtonItem+TintColor.h */,
+				92DCF3091BFDC1A30067C154 /* UIBarButtonItem+TintColor.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		92DCF30A1BFDC1A30067C154 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF30B1BFDC1A30067C154 /* UIButton+NightVersion.h */,
+				92DCF30C1BFDC1A30067C154 /* UIButton+NightVersion.m */,
+				92DCF30D1BFDC1A30067C154 /* UIButton+TitleColor.h */,
+				92DCF30E1BFDC1A30067C154 /* UIButton+TitleColor.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		92DCF30F1BFDC1A30067C154 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3101BFDC1A30067C154 /* UILabel+NightVersion.h */,
+				92DCF3111BFDC1A30067C154 /* UILabel+NightVersion.m */,
+				92DCF3121BFDC1A30067C154 /* UILabel+TextColor.h */,
+				92DCF3131BFDC1A30067C154 /* UILabel+TextColor.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		92DCF3141BFDC1A30067C154 /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3151BFDC1A30067C154 /* UINavigationBar+BarTintColor.h */,
+				92DCF3161BFDC1A30067C154 /* UINavigationBar+BarTintColor.m */,
+				92DCF3171BFDC1A30067C154 /* UINavigationBar+NightVersion.h */,
+				92DCF3181BFDC1A30067C154 /* UINavigationBar+NightVersion.m */,
+				92DCF3191BFDC1A30067C154 /* UINavigationBar+TintColor.h */,
+				92DCF31A1BFDC1A30067C154 /* UINavigationBar+TintColor.m */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		92DCF31B1BFDC1A30067C154 /* UITabBar */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF31C1BFDC1A30067C154 /* UITabBar+BarTintColor.h */,
+				92DCF31D1BFDC1A30067C154 /* UITabBar+BarTintColor.m */,
+				92DCF31E1BFDC1A30067C154 /* UITabBar+NightVersion.h */,
+				92DCF31F1BFDC1A30067C154 /* UITabBar+NightVersion.m */,
+			);
+			path = UITabBar;
+			sourceTree = "<group>";
+		};
+		92DCF3201BFDC1A30067C154 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3211BFDC1A30067C154 /* UITableView+NightVersion.h */,
+				92DCF3221BFDC1A30067C154 /* UITableView+NightVersion.m */,
+				92DCF3231BFDC1A30067C154 /* UITableView+SeparatorColor.h */,
+				92DCF3241BFDC1A30067C154 /* UITableView+SeparatorColor.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		92DCF3251BFDC1A30067C154 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3261BFDC1A30067C154 /* UIView+BackgroundColor.h */,
+				92DCF3271BFDC1A30067C154 /* UIView+BackgroundColor.m */,
+				92DCF3281BFDC1A30067C154 /* UIView+NightVersion.h */,
+				92DCF3291BFDC1A30067C154 /* UIView+NightVersion.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		92DCF32C1BFDC1A30067C154 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF32D1BFDC1A30067C154 /* lib */,
+			);
+			path = generator;
+			sourceTree = "<group>";
+		};
+		92DCF32D1BFDC1A30067C154 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF32E1BFDC1A30067C154 /* generator */,
+				92DCF33F1BFDC1A30067C154 /* generator.rb */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		92DCF32E1BFDC1A30067C154 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF32F1BFDC1A30067C154 /* json */,
+				92DCF3331BFDC1A30067C154 /* model */,
+				92DCF3361BFDC1A30067C154 /* parser.rb */,
+				92DCF3371BFDC1A30067C154 /* project.rb */,
+				92DCF3381BFDC1A30067C154 /* render.rb */,
+				92DCF3391BFDC1A30067C154 /* template */,
+				92DCF33E1BFDC1A30067C154 /* xcodeproj.rb */,
+			);
+			path = generator;
+			sourceTree = "<group>";
+		};
+		92DCF32F1BFDC1A30067C154 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3301BFDC1A30067C154 /* method.json */,
+				92DCF3311BFDC1A30067C154 /* project.json */,
+				92DCF3321BFDC1A30067C154 /* superklass.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		92DCF3331BFDC1A30067C154 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF3341BFDC1A30067C154 /* objc_class.rb */,
+				92DCF3351BFDC1A30067C154 /* objc_property.rb */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		92DCF3391BFDC1A30067C154 /* template */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF33A1BFDC1A30067C154 /* color.h.erb */,
+				92DCF33B1BFDC1A30067C154 /* color.m.erb */,
+				92DCF33C1BFDC1A30067C154 /* nightversion.h.erb */,
+				92DCF33D1BFDC1A30067C154 /* nightversion.m.erb */,
+			);
+			path = template;
+			sourceTree = "<group>";
+		};
 		92EC32291BF337D200B823E0 /* ShopDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -5494,6 +5818,12 @@
 				92EC322D1BF3393900B823E0 /* MMHOtherRecommentCell.h */,
 				92EC322E1BF3393900B823E0 /* MMHOtherRecommentCell.m */,
 				92EC322F1BF3393900B823E0 /* MMHOtherRecommentCell.xib */,
+				92DCF2611BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.h */,
+				92DCF2621BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.m */,
+				92DCF2631BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.xib */,
+				92DCF2661BFDA6350067C154 /* MMHShopDetailImageCell.h */,
+				92DCF2671BFDA6350067C154 /* MMHShopDetailImageCell.m */,
+				92DCF2681BFDA6350067C154 /* MMHShopDetailImageCell.xib */,
 			);
 			name = ShopDetailView;
 			sourceTree = "<group>";
@@ -5762,6 +6092,7 @@
 				92D87AD21BCE4353009D6A1C /* icon_homepage_map_selected.png in Resources */,
 				92D87A461BCE4353009D6A1C /* icon_close@2x.png in Resources */,
 				92D877E01BCE4353009D6A1C /* dropdown_anim__00027@2x.png in Resources */,
+				92DCF3591BFDC1A30067C154 /* method.json in Resources */,
 				92D87B5A1BCE4353009D6A1C /* icon_mine_level5user@2x.png in Resources */,
 				92D87ACC1BCE4353009D6A1C /* icon_homepage_hotTopicArrow.png in Resources */,
 				92D879241BCE4353009D6A1C /* bg_search_field@2x.png in Resources */,
@@ -5821,6 +6152,7 @@
 				92D87B501BCE4353009D6A1C /* icon_mine_level0user@2x.png in Resources */,
 				92D87C151BCE4353009D6A1C /* icon_share.png in Resources */,
 				92D87A111BCE4353009D6A1C /* icon_camera_finish_disabled@2x.png in Resources */,
+				92DCF35A1BFDC1A30067C154 /* project.json in Resources */,
 				92D878B11BCE4353009D6A1C /* bg_image_review_selected@2x.png in Resources */,
 				92D87B1B1BCE4353009D6A1C /* icon_merchant_address@2x.png in Resources */,
 				92D87C3B1BCE4353009D6A1C /* icon_today_special_more_right_arrow@2x.png in Resources */,
@@ -5845,6 +6177,7 @@
 				92D87C461BCE4353009D6A1C /* icon_wedding_sole@2x.png in Resources */,
 				92D87C971BCE4353009D6A1C /* share_logo_sms@2x.png in Resources */,
 				92D878D21BCE4353009D6A1C /* bg_merchant_checkRoute_normal@2x.png in Resources */,
+				92DCF35E1BFDC1A30067C154 /* parser.rb in Resources */,
 				92D879BC1BCE4353009D6A1C /* button_dealsmap_back_normal.png in Resources */,
 				92D87C251BCE4353009D6A1C /* icon_survey_progressbar_backound@2x.png in Resources */,
 				92D87C8A1BCE4353009D6A1C /* seat_bg@2x.png in Resources */,
@@ -5886,6 +6219,7 @@
 				92D87C6D1BCE4353009D6A1C /* mapTabButton.png in Resources */,
 				92D87BE81BCE4353009D6A1C /* icon_reserve_default@2x.png in Resources */,
 				92D8789F1BCE4353009D6A1C /* bg_homepage_hottopic_shadow.png in Resources */,
+				92DCF2651BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.xib in Resources */,
 				92B51BFE1BDF720400E36012 /* MMHMineBigTitleCell.xib in Resources */,
 				92D87AEB1BCE4353009D6A1C /* icon_invite_share_logo_QQ@2x.png in Resources */,
 				92D87B001BCE4353009D6A1C /* icon_login_weixin@2x.png in Resources */,
@@ -5976,6 +6310,7 @@
 				92D87B2C1BCE4353009D6A1C /* icon_merchant_name_bg.png in Resources */,
 				92D879D11BCE4353009D6A1C /* collect_bigStar@2x.png in Resources */,
 				92D878561BCE4353009D6A1C /* bg_actionSheet_panel@2x.png in Resources */,
+				92DCF3691BFDC1A30067C154 /* Rakefile in Resources */,
 				92D87A591BCE4353009D6A1C /* icon_deal_hotelBathe@2x.png in Resources */,
 				92D878591BCE4353009D6A1C /* bg_button_cancel_refund@2x.png in Resources */,
 				92D879E11BCE4353009D6A1C /* ic_comment_social_share_kaixin_normal@2x.png in Resources */,
@@ -6049,6 +6384,7 @@
 				92D878241BCE4353009D6A1C /* dropdown_anim__00058@2x.png in Resources */,
 				92D879271BCE4353009D6A1C /* bg_search_segmented_left@2x.png in Resources */,
 				92D878D01BCE4353009D6A1C /* bg_map_pop@2x.png in Resources */,
+				92DCF26A1BFDA6350067C154 /* MMHShopDetailImageCell.xib in Resources */,
 				92D87AEC1BCE4353009D6A1C /* icon_invite_share_logo_QQweibo@2x.png in Resources */,
 				92D8791D1BCE4353009D6A1C /* bg_review_merchant_reply@2x.png in Resources */,
 				92D878111BCE4353009D6A1C /* Contents.json in Resources */,
@@ -6156,6 +6492,7 @@
 				92D87A171BCE4353009D6A1C /* icon_camera_image_blank@2x.png in Resources */,
 				92D878AB1BCE4353009D6A1C /* bg_hotTopicDetail_Default.png in Resources */,
 				92D8793D1BCE4353009D6A1C /* bg_uploadimage_default@2x.png in Resources */,
+				92DCF3621BFDC1A30067C154 /* color.m.erb in Resources */,
 				92D879DC1BCE4353009D6A1C /* ic_collect_suc.png in Resources */,
 				92D877C81BCE4353009D6A1C /* dropdown_anim__00016@2x.png in Resources */,
 				92D87A741BCE4353009D6A1C /* icon_deal_soldNumber_enabled@2x.png in Resources */,
@@ -6178,6 +6515,7 @@
 				92D877F11BCE4353009D6A1C /* Contents.json in Resources */,
 				92D878571BCE4353009D6A1C /* bg_album_load_failed@2x.png in Resources */,
 				92D879EF1BCE4353009D6A1C /* ic_couple_large.png in Resources */,
+				92DCF35D1BFDC1A30067C154 /* objc_property.rb in Resources */,
 				92D8798E1BCE4353009D6A1C /* btn_homepage_category_selected.png in Resources */,
 				92D87B411BCE4353009D6A1C /* icon_messageCenter_empty.png in Resources */,
 				92D877EF1BCE4353009D6A1C /* Contents.json in Resources */,
@@ -6344,11 +6682,13 @@
 				92D879011BCE4353009D6A1C /* bg_negative_review_normal@2x.png in Resources */,
 				92D87B0E1BCE4353009D6A1C /* icon_map_dealDetailArrow.png in Resources */,
 				92D879031BCE4353009D6A1C /* bg_open_point_trip_568h@2x.png in Resources */,
+				92DCF3611BFDC1A30067C154 /* color.h.erb in Resources */,
 				92D878D51BCE4353009D6A1C /* bg_merchant_photo_placeholder_big@2x.png in Resources */,
 				92D87BD41BCE4353009D6A1C /* icon_rating_star_half.png in Resources */,
 				92D87CA61BCE4353009D6A1C /* todaySpecialHeaderTitleImage@2x.png in Resources */,
 				92D87C401BCE4353009D6A1C /* icon_userreview_defaultavatar.png in Resources */,
 				92D87BD31BCE4353009D6A1C /* icon_rating_perfect_selected@2x.png in Resources */,
+				92DCF3651BFDC1A30067C154 /* xcodeproj.rb in Resources */,
 				92D87AA41BCE4353009D6A1C /* icon_filter_seperator@2x.png in Resources */,
 				92D87A3A1BCE4353009D6A1C /* icon_category_home_page_more@2x.png in Resources */,
 				92D877FE1BCE4353009D6A1C /* dropdown_anim__00040@2x.png in Resources */,
@@ -6359,6 +6699,7 @@
 				92D877DD1BCE4353009D6A1C /* Contents.json in Resources */,
 				92D87C331BCE4353009D6A1C /* icon_tabbar_onsite@2x.png in Resources */,
 				92D8798A1BCE4353009D6A1C /* btn_grey_highlighted.png in Resources */,
+				92DCF3671BFDC1A30067C154 /* LICENSE in Resources */,
 				92D87A191BCE4353009D6A1C /* icon_camera_photo_library@2x.png in Resources */,
 				92D8792B1BCE4353009D6A1C /* bg_segmented_left_normal@2x.png in Resources */,
 				92D87BC51BCE4353009D6A1C /* icon_price_verticalLine@2x.png in Resources */,
@@ -6452,6 +6793,7 @@
 				92D878881BCE4353009D6A1C /* bg_dealRecommend_grayBottom@2x.png in Resources */,
 				92D879051BCE4353009D6A1C /* bg_orderList_deletionView@2x.png in Resources */,
 				92D87A8E1BCE4353009D6A1C /* icon_dropdown_list_topShadow@2x.png in Resources */,
+				92DCF3601BFDC1A30067C154 /* render.rb in Resources */,
 				92D87BB41BCE4353009D6A1C /* icon_payment_201.png in Resources */,
 				92D878B91BCE4353009D6A1C /* bg_keyboard2_selected@2x.png in Resources */,
 				92D878DB1BCE4353009D6A1C /* bg_merchantPhoto_cell_plural@2x.png in Resources */,
@@ -6464,6 +6806,7 @@
 				92D87B601BCE4353009D6A1C /* icon_mine_myAccount_address@2x.png in Resources */,
 				92D87C9F1BCE4353009D6A1C /* share_logo_xinlang@2x.png in Resources */,
 				92D8790A1BCE4353009D6A1C /* bg_orderReview_grayBottom@2x.png in Resources */,
+				92DCF35F1BFDC1A30067C154 /* project.rb in Resources */,
 				92D879651BCE4353009D6A1C /* btn_captcha@2x.png in Resources */,
 				92D877EC1BCE4353009D6A1C /* dropdown_anim__00032@2x.png in Resources */,
 				92D87C6A1BCE4353009D6A1C /* logo_share_sina_weibo@2x.png in Resources */,
@@ -6481,12 +6824,14 @@
 				92D87C5A1BCE4353009D6A1C /* LaunchImage@2x.png in Resources */,
 				92D87BFE1BCE4353009D6A1C /* icon_route_start_end@2x.png in Resources */,
 				92D8794A1BCE4353009D6A1C /* bg_vouchers_tips.png in Resources */,
+				92DCF3681BFDC1A30067C154 /* property.json in Resources */,
 				92D87C961BCE4353009D6A1C /* share_logo_sms.png in Resources */,
 				92D879491BCE4353009D6A1C /* bg_vouchers_movie.png in Resources */,
 				92D878181BCE4353009D6A1C /* dropdown_anim__00052@2x.png in Resources */,
 				92D87AA71BCE4353009D6A1C /* icon_group_cinema_feature_3d.png in Resources */,
 				92D878C41BCE4353009D6A1C /* bg_keyboard8@2x.png in Resources */,
 				92D8784E1BCE4353009D6A1C /* AppIcon72x72@2x~ipad.png in Resources */,
+				92DCF3571BFDC1A30067C154 /* Gemfile in Resources */,
 				92D87A891BCE4353009D6A1C /* icon_dismiss@2x.png in Resources */,
 				92D87AC51BCE4353009D6A1C /* icon_homepage_foodCategory.png in Resources */,
 				92D878DE1BCE4353009D6A1C /* bg_mine_dailyRecommend_section_highlight@2x.png in Resources */,
@@ -6576,6 +6921,7 @@
 				92D877EE1BCE4353009D6A1C /* dropdown_anim__00033@2x.png in Resources */,
 				92D87BC41BCE4353009D6A1C /* icon_poorNetwork@3x.png in Resources */,
 				92D87B951BCE4353009D6A1C /* icon_myVoucher_noVoucher_new@2x.png in Resources */,
+				92DCF35C1BFDC1A30067C154 /* objc_class.rb in Resources */,
 				92D879CA1BCE4353009D6A1C /* cell_top@2x.png in Resources */,
 				92D87AF21BCE4353009D6A1C /* icon_invite_share_logo_weixin_Friends@2x.png in Resources */,
 				92D87B281BCE4353009D6A1C /* icon_merchant_mark_tui.png in Resources */,
@@ -6639,6 +6985,7 @@
 				92D87B3B1BCE4353009D6A1C /* icon_merchantPhoto_cell_count@2x.png in Resources */,
 				92D87AB91BCE4353009D6A1C /* icon_homepage_aroundjourneyCategory.png in Resources */,
 				92D877D61BCE4353009D6A1C /* dropdown_anim__00022@2x.png in Resources */,
+				92DCF35B1BFDC1A30067C154 /* superklass.json in Resources */,
 				92D87CC11BCE4353009D6A1C /* icon_tabbar_onsite_selected@2x.png in Resources */,
 				92D878651BCE4353009D6A1C /* bg_button_refund_hl@2x.png in Resources */,
 				92D87A071BCE4353009D6A1C /* icon_arrow_dropdown_selected.png in Resources */,
@@ -6750,6 +7097,7 @@
 				92D878061BCE4353009D6A1C /* dropdown_anim__00044@2x.png in Resources */,
 				92D87C0B1BCE4353009D6A1C /* icon_search_empty.png in Resources */,
 				92D87B241BCE4353009D6A1C /* icon_merchant_mark_piao_gray.png in Resources */,
+				92DCF3661BFDC1A30067C154 /* generator.rb in Resources */,
 				92D87C221BCE4353009D6A1C /* icon_survey_option_select@2x.png in Resources */,
 				92D87A031BCE4353009D6A1C /* icon_address_merchant_detail@2x.png in Resources */,
 				92D87AEA1BCE4353009D6A1C /* icon_invite_friends_qr.png in Resources */,
@@ -6964,6 +7312,7 @@
 				92D87A621BCE4353009D6A1C /* icon_deal_lightning@2x.png in Resources */,
 				92D87BAC1BCE4353009D6A1C /* icon_password_mask@2x.png in Resources */,
 				92D878751BCE4353009D6A1C /* bg_customerReview_highlightedBar@2x.png in Resources */,
+				92DCF3581BFDC1A30067C154 /* Gemfile.lock in Resources */,
 				92D879541BCE4353009D6A1C /* btn_backItem.png in Resources */,
 				92D879CE1BCE4353009D6A1C /* cinema_line@2x.png in Resources */,
 				92D879661BCE4353009D6A1C /* btn_captcha_highlighted.png in Resources */,
@@ -7002,6 +7351,7 @@
 				92D87A251BCE4353009D6A1C /* icon_cate_normal_22.png in Resources */,
 				92D87B151BCE4353009D6A1C /* icon_map_refresh.png in Resources */,
 				92D87BED1BCE4353009D6A1C /* icon_review_useful_selected.png in Resources */,
+				92DCF3631BFDC1A30067C154 /* nightversion.h.erb in Resources */,
 				92D87B2F1BCE4353009D6A1C /* icon_merchant_rating_star_half.png in Resources */,
 				92D87A0D1BCE4353009D6A1C /* icon_bank@2x.png in Resources */,
 				92D878491BCE4353009D6A1C /* AppIcon50x50~ipad.png in Resources */,
@@ -7016,6 +7366,7 @@
 				92D871B61BCE35CC009D6A1C /* Images.xcassets in Resources */,
 				92D878011BCE4353009D6A1C /* Contents.json in Resources */,
 				92D8790B1BCE4353009D6A1C /* bg_orderReview_nodeImage.png in Resources */,
+				92DCF3641BFDC1A30067C154 /* nightversion.m.erb in Resources */,
 				92D878C81BCE4353009D6A1C /* bg_keyboard_delete@2x.png in Resources */,
 				92D879B11BCE4353009D6A1C /* btn_roomfull@2x.png in Resources */,
 				92D87B4F1BCE4353009D6A1C /* icon_mine_level0@2x.png in Resources */,
@@ -7083,6 +7434,7 @@
 				92CBD8231BE751A300AD0C94 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				92F5FCA91BCF4B7F00F6E656 /* MMHTabBarViewController.m in Sources */,
 				92F5FD251BD09B4C00F6E656 /* NSData+ImageContentType.m in Sources */,
+				92DCF3541BFDC1A30067C154 /* UITableView+SeparatorColor.m in Sources */,
 				92F5FD1E1BD09B4C00F6E656 /* MJFoundation.m in Sources */,
 				92F5FCAD1BCF4BE000F6E656 /* MMHTabBar.m in Sources */,
 				92ABABD51BDA333C00030F81 /* MMHMoreCell.m in Sources */,
@@ -7096,14 +7448,18 @@
 				92F5FCCA1BCF7F3E00F6E656 /* MMHBaseViewController.m in Sources */,
 				92B51C011BE076A500E36012 /* MMHImageScrollCell.m in Sources */,
 				92D87CD41BCE46B9009D6A1C /* MMHSelectAddressView.m in Sources */,
+				92DCF2641BFD97CB0067C154 /* MMHShopDetailBackAnyTimeCell.m in Sources */,
 				92B51C261BE0CF0100E36012 /* MJRefreshLegendHeader.m in Sources */,
 				92F5FD141BD09B4C00F6E656 /* AFHTTPRequestOperation.m in Sources */,
+				92DCF34F1BFDC1A30067C154 /* UINavigationBar+NightVersion.m in Sources */,
 				92EC32261BF324A500B823E0 /* MMHHotCityNameCell.m in Sources */,
 				92B51C241BE0CF0100E36012 /* MJRefreshHeader.m in Sources */,
 				92F5FD2A1BD09B4C00F6E656 /* SDWebImageDownloaderOperation.m in Sources */,
 				92F5FD2F1BD09B4C00F6E656 /* UIImage+MultiFormat.m in Sources */,
+				92DCF3511BFDC1A30067C154 /* UITabBar+BarTintColor.m in Sources */,
 				921B8B681BD49FD400DFFFDD /* MMHMenuBtnView.m in Sources */,
 				92F5FD211BD09B4C00F6E656 /* NSObject+MJCoding.m in Sources */,
+				92DCF3521BFDC1A30067C154 /* UITabBar+NightVersion.m in Sources */,
 				921B8B5E1BD0FDAF00DFFFDD /* GetUrlString.m in Sources */,
 				92F5FCB71BCF5B6E00F6E656 /* MMHNavigationController.m in Sources */,
 				92F5FD1D1BD09B4C00F6E656 /* MJConst.m in Sources */,
@@ -7113,28 +7469,38 @@
 				92CBD8291BE751A400AD0C94 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				92B51BF21BDF520B00E36012 /* MMHMineCell.m in Sources */,
 				92B51C221BE0CF0100E36012 /* MJRefreshGifFooter.m in Sources */,
+				92DCF36A1BFDC1A30067C154 /* README.md in Sources */,
+				92DCF2691BFDA6350067C154 /* MMHShopDetailImageCell.m in Sources */,
 				92B51C201BE0CF0100E36012 /* MJRefreshConst.m in Sources */,
 				921B8B711BD5E6DE00DFFFDD /* MMHRushDataModel.m in Sources */,
 				92CBD82F1BE85AE400AD0C94 /* MMHGuessCell.m in Sources */,
 				9286DB951BEB357000F93FA6 /* MMHRushBuyCell.m in Sources */,
 				92CBD81D1BE751A300AD0C94 /* IQNSArray+Sort.m in Sources */,
 				921B8B901BD8CE7000DFFFDD /* MMHDiscountModel.m in Sources */,
+				92DCF3561BFDC1A30067C154 /* UIView+NightVersion.m in Sources */,
 				92CBD81F1BE751A300AD0C94 /* IQUIView+Hierarchy.m in Sources */,
 				92F5FCB41BCF4EBE00F6E656 /* MMHMultipleButtonView.m in Sources */,
+				92DCF3461BFDC1A30067C154 /* DKNightVersionUtility.m in Sources */,
 				921B8B611BD0FEEC00DFFFDD /* MMHHomeServiceModel.m in Sources */,
+				92DCF3451BFDC1A30067C154 /* DKNightVersionManager.m in Sources */,
 				92F5FD1F1BD09B4C00F6E656 /* MJProperty.m in Sources */,
 				92F5FCBB1BCF610B00F6E656 /* MMHMineViewController.m in Sources */,
 				92CBD8221BE751A300AD0C94 /* IQKeyboardManager.m in Sources */,
 				92D871AE1BCE35CC009D6A1C /* MMHMeiTuan.xcdatamodeld in Sources */,
+				92DCF34B1BFDC1A30067C154 /* UIButton+TitleColor.m in Sources */,
 				92F5FD201BD09B4C00F6E656 /* MJType.m in Sources */,
 				92F5FD261BD09B4C00F6E656 /* SDImageCache.m in Sources */,
 				92B51C281BE0CF0100E36012 /* UIScrollView+MJRefresh.m in Sources */,
+				92DCF3491BFDC1A30067C154 /* UIBarButtonItem+TintColor.m in Sources */,
 				92F5FD281BD09B4C00F6E656 /* SDWebImageDecoder.m in Sources */,
 				92B51BEF1BDF4F1800E36012 /* MMHMineBigTitleCell.m in Sources */,
+				92DCF2E21BFDB33E0067C154 /* AppConfigure.m in Sources */,
 				921B8B991BD8CFCB00DFFFDD /* MMHShopDatailDataModel.m in Sources */,
 				92B51C1F1BE0CF0100E36012 /* MJRefreshComponent.m in Sources */,
 				92F5FD171BD09B4C00F6E656 /* AFNetworkReachabilityManager.m in Sources */,
 				92F5FD271BD09B4C00F6E656 /* SDWebImageCompat.m in Sources */,
+				92DCF3481BFDC1A30067C154 /* UIBarButtonItem+NightVersion.m in Sources */,
+				92DCF3471BFDC1A30067C154 /* UINavigationBar+Animation.m in Sources */,
 				92F5FD241BD09B4C00F6E656 /* NSString+MJExtension.m in Sources */,
 				921B8B5B1BD0F46900DFFFDD /* UITableView+MMHTableView.m in Sources */,
 				92F5FD301BD09B4C00F6E656 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -7158,16 +7524,23 @@
 				92F5FCC71BCF621000F6E656 /* MMHVisitViewController.m in Sources */,
 				92D87CC41BCE4433009D6A1C /* ViewController.m in Sources */,
 				92B51C041BE0782700E36012 /* MMHImageScrollView.m in Sources */,
+				92DCF3441BFDC1A30067C154 /* UIViewController+ChangeColor.m in Sources */,
 				92F5FD231BD09B4C00F6E656 /* NSObject+MJProperty.m in Sources */,
+				92DCF34D1BFDC1A30067C154 /* UILabel+TextColor.m in Sources */,
+				92DCF3551BFDC1A30067C154 /* UIView+BackgroundColor.m in Sources */,
+				92DCF3531BFDC1A30067C154 /* UITableView+NightVersion.m in Sources */,
 				921B8B961BD8CF6D00DFFFDD /* MMHRecommentModel.m in Sources */,
 				92A539B51BF03B7300070FB6 /* MMHRecommentCell.m in Sources */,
 				92EC32221BF3205900B823E0 /* MMHCityTitleHeaderView.m in Sources */,
 				921B8BA21BDA117100DFFFDD /* MMHRushDealsModel.m in Sources */,
+				92DCF34C1BFDC1A30067C154 /* UILabel+NightVersion.m in Sources */,
 				921B8B9C1BD8CFE600DFFFDD /* MMHShopRecommentModel.m in Sources */,
 				92B51BE11BDDFC1400E36012 /* MMHWebViewController.m in Sources */,
 				92B51C291BE0CF0100E36012 /* UIView+MJExtension.m in Sources */,
+				92DCF3501BFDC1A30067C154 /* UINavigationBar+TintColor.m in Sources */,
 				92B51C251BE0CF0100E36012 /* MJRefreshLegendFooter.m in Sources */,
 				92F5FD291BD09B4C00F6E656 /* SDWebImageDownloader.m in Sources */,
+				92DCF34A1BFDC1A30067C154 /* UIButton+NightVersion.m in Sources */,
 				92EC32141BF31AA400B823E0 /* MMHAllCityNameCell.m in Sources */,
 				92CBD8201BE751A300AD0C94 /* IQUIViewController+Additions.m in Sources */,
 				92F5FD2E1BD09B4C00F6E656 /* UIImage+GIF.m in Sources */,
@@ -7184,6 +7557,7 @@
 				921B8B931BD8CF3D00DFFFDD /* MMHHotQueueModel.m in Sources */,
 				92F5FD151BD09B4C00F6E656 /* AFHTTPRequestOperationManager.m in Sources */,
 				92F5FCC31BCF61C900F6E656 /* MMHMerchantViewController.m in Sources */,
+				92DCF34E1BFDC1A30067C154 /* UINavigationBar+BarTintColor.m in Sources */,
 				92F5FD2C1BD09B4C00F6E656 /* SDWebImagePrefetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

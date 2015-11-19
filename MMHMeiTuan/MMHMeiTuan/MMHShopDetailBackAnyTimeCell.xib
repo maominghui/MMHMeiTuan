@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MMHShopDetailBackAnyTimeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAh-Fh-1aA">
+                        <rect key="frame" x="131" y="11" width="165" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="165" id="OZq-i6-Zwr"/>
+                            <constraint firstAttribute="height" constant="21" id="R1O-Wx-VES"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.56316414988814312" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWa-rB-NBV">
+                        <rect key="frame" x="8" y="10" width="64" height="22"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="随时退" image="icon_deal_anytime_refund.png">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="backAnyTimeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k2a-DU-mNX"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="xWa-rB-NBV" firstAttribute="baseline" secondItem="KAh-Fh-1aA" secondAttribute="baseline" id="0Ei-sP-PyD"/>
+                    <constraint firstItem="xWa-rB-NBV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="2Ue-dM-yKr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KAh-Fh-1aA" secondAttribute="bottom" constant="3" id="4pi-Me-7zU"/>
+                    <constraint firstItem="xWa-rB-NBV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="C6b-O0-LZ0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xWa-rB-NBV" secondAttribute="bottom" constant="3" id="Wcg-Bw-2n7"/>
+                    <constraint firstItem="KAh-Fh-1aA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="a3v-Oh-eoT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KAh-Fh-1aA" secondAttribute="trailing" constant="16" id="sWq-dl-2q2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="backAnyTimeNumberLabel" destination="KAh-Fh-1aA" id="Vff-h3-qyS"/>
+            </connections>
+            <point key="canvasLocation" x="208" y="223"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_deal_anytime_refund.png" width="16" height="16"/>
+    </resources>
+</document>

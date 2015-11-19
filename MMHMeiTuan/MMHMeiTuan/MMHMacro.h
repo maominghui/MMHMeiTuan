@@ -18,6 +18,14 @@
 #define navigationBarColor RGB(33, 192, 174)
 #define separaterColor RGB(200, 199, 204)
 
+
+//夜间模式背景色
+#define NightBGViewColor [UIColor colorWithRed:38 / 255.0 green:38 / 255.0 blue:38 / 255.0 alpha:1] // #262626
+#define NightNavigationBarColor [UIColor colorWithRed:32 / 255.0 green:32 / 255.0 blue:32 / 255.0 alpha:1] // #202020
+#define DawnNavigationBarColor [UIColor colorWithRed:236 / 255.0 green:236 / 255.0 blue:236 / 255.0 alpha:1] // #ECECEC
+#define DawnViewBGColor [UIColor colorWithRed:235 / 255.0 green:235 / 255.0 blue:235 / 255.0 alpha:1] // #EBEBEB
+
+
 //字体
 #define kFONT16                  [UIFont systemFontOfSize:16.0f]
 #define kFONT15                  [UIFont systemFontOfSize:15.0f]
@@ -25,7 +33,8 @@
 #define kFONT10                  [UIFont systemFontOfSize:10.0f]
 
 
-
+// common
+#define UserDefaults          [NSUserDefaults standardUserDefaults]
 
 
 //经纬度   这里经纬度写死的，真是开发中应该根据定位出来获取到的
@@ -52,5 +61,7 @@
 #import "UIBarButtonItem+MMHBarButtonItem.h"
 #import "UITableView+MMHTableView.h"
 #import "IQKeyboardManager.h"
+#import "AppConfigure.h"
+#import "DKNightVersion.h"
 
 #endif

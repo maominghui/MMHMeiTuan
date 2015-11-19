@@ -9,6 +9,13 @@
 #import "MMHMoreViewController.h"
 #import "MMHMoreCell.h"
 #import "MMHWebViewController.h"
+
+#define DawnViewBGColor [UIColor colorWithRed:235 / 255.0 green:235 / 255.0 blue:235 / 255.0 alpha:1] // #EBEBEB
+#define DawnCellBGColor [UIColor colorWithRed:249 / 255.0 green:249 / 255.0 blue:249 / 255.0 alpha:1] // #F9F9F9
+#define NightCellBGColor [UIColor colorWithRed:50 / 255.0 green:50 / 255.0 blue:50 / 255.0 alpha:1] // #323232
+#define NightCellTextColor [UIColor colorWithRed:111 / 255.0 green:111 / 255.0 blue:111 / 255.0 alpha:1] // #6F6F6F
+#define NightCellHeaderTextColor [UIColor colorWithRed:75 / 255.0 green:75 / 255.0 blue:75 / 255.0 alpha:1] // #4B4B4B
+
 @interface MMHMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *moreTableView;
@@ -68,10 +75,32 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MMHMoreCell *cell = [MMHMoreCell cellWithTableView:tableView indexPath:indexPath moreArray:self.moreModelArray];
+    
+    cell.textLabel.nightTextColor = NightCellTextColor;
+    
+    
+    if (indexPath.section == 1) {
+
+    if (indexPath.row == 1) {
+        //开启夜间模式
+        UISwitch *nightModeSwitch = [[UISwitch alloc]init];
+        nightModeSwitch.on = [AppConfigure boolForKey:@"APP_THEME_NIGHT_MODE"];
+        [nightModeSwitch addTarget:self action:@selector(nightModeSwitch:) forControlEvents:UIControlEventEditingChanged];
+        cell.accessoryView = nightModeSwitch;
+        }
+    }
+    cell.backgroundColor = DawnCellBGColor;
+    cell.nightBackgroundColor = NightCellBGColor;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        if (indexPath.row == 4) {
+            //清空缓存
+            
+        }
+    }
     if (indexPath.section == 2) {
         if (indexPath.row == 1) {
             //支付帮助
@@ -95,14 +124,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Touch Events
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)nightModeSwitch:(UISwitch *)modeSwitch {
+    if (modeSwitch.isOn) {
+        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:NightNavigationBarColor] forBarMetrics:UIBarMetricsDefault];
+        self.moreTableView.backgroundColor = NightBGViewColor;
+        [DKNightVersionManager nightFalling];
+        [AppConfigure setBool:YES forKey:APP_THEME_NIGHT_MODE];
+    } else {
+        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:DawnNavigationBarColor] forBarMetrics:UIBarMetricsDefault];
+        self.moreTableView.backgroundColor = DawnViewBGColor;
+        [DKNightVersionManager dawnComing];
+        // why 要设置两次 TableView 的背景色？因为我发现，在设置界面切换夜间模式到普通模式之后，TableView 的背景色会变黑掉
+        // 很奇怪的问题，然后我在调用 dawnComing 方法之后再设置一遍 Tableview 的背景色就可以解决这个问题。。。
+        self.moreTableView.backgroundColor = DawnViewBGColor;
+        [AppConfigure setBool:NO forKey:APP_THEME_NIGHT_MODE];
+    }
+    
+    [self.moreTableView reloadData];
 }
-*/
+
+#pragma mark - Private
+
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    [color setFill];
+    UIRectFill(rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 @end
