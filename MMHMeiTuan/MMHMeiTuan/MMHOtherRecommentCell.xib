@@ -43,6 +43,13 @@
                 <animations/>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="introduceLabel" destination="QVV-uY-PzZ" id="dYf-2p-jOY"/>
+                <outlet property="priceLabel" destination="DaO-vS-Lff" id="sKa-aL-bG3"/>
+                <outlet property="productNameLabel" destination="oSX-z4-kA9" id="cws-1h-fUZ"/>
+                <outlet property="shopImageView" destination="xwZ-wi-wIj" id="rmW-eF-nGa"/>
+            </connections>
+            <point key="canvasLocation" x="444" y="167"/>
         </tableViewCell>
     </objects>
 </document>

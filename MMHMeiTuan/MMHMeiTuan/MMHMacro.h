@@ -36,6 +36,7 @@
 // common
 #define UserDefaults          [NSUserDefaults standardUserDefaults]
 
+#   define MMHLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
 
 //经纬度   这里经纬度写死的，真是开发中应该根据定位出来获取到的
 #define LATITUDE_DEFAULT 39.983497
@@ -57,12 +58,14 @@
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
 #import "AFNetworking.h"
-//#import "BMapKit.h"
+#import "BMapKit.h"
 #import "UIBarButtonItem+MMHBarButtonItem.h"
 #import "UITableView+MMHTableView.h"
 #import "IQKeyboardManager.h"
 #import "AppConfigure.h"
 #import "DKNightVersion.h"
 #import "MBProgressHUD.h"
+#import "FMDB.h"
+
 
 #endif

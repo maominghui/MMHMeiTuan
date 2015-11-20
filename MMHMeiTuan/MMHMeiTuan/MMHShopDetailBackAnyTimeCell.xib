@@ -26,7 +26,7 @@
                         <color key="textColor" white="0.56316414988814312" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWa-rB-NBV">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWa-rB-NBV">
                         <rect key="frame" x="8" y="10" width="64" height="22"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>

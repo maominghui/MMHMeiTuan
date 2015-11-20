@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MMHShopRecommentModel;
 @interface MMHOtherRecommentCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
+@property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *introduceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
++ (instancetype)cellWithTableView:(UITableView *)tableView;
+@property(nonatomic ,strong)MMHShopRecommentModel *shopRecommentModel;
 @end

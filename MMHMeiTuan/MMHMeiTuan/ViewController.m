@@ -10,7 +10,7 @@
 #import "ViewController.h"
 
 #import "MMHHomeMenuCell.h"
-
+#import "MMHRushBuyCell.h"
 #import "MMHRushDataModel.h"
 #import "MMHRushDealsModel.h"
 #import "MMHDiscountCell.h"
@@ -24,9 +24,15 @@
 #import "MMHSelectAddressView.h"
 #import "MMHAddressScrollView.h"
 
+//#import "MMHMapViewController.h"
+#import "MMHAllCityNameViewController.h"
+#import "MMHRushBuyWebViewController.h"
+#import "MMHDiscountWebViewController.h"
+#import "MMHHotQueueViewController.h"
+#import "MMHShopDetailViewController.h"
 #import "MMHMenuViewController.h"
 
-@interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHSelectAddressViewTapDelegate,MMHAddressScrollViewButtonDelegate,MMHChangeCityButtonDelegate,MMHDiscountCellDelegate,MMHHomeMenuCellDelegate>
+@interface ViewController()<UITableViewDelegate,UITableViewDataSource,MMHSelectAddressViewTapDelegate,MMHAddressScrollViewButtonDelegate,MMHChangeCityButtonDelegate,MMHDiscountCellDelegate,MMHHomeMenuCellDelegate,MMHRushBuyCellDelegate>
 
 @property(nonatomic, strong)UITableView *firstTableView;
 @property(nonatomic, strong)NSArray *menuArray;
@@ -45,14 +51,18 @@
     [super viewDidLoad];
     self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
-    //创建一个tableView
+    //创建tableView
+    //[self setUpTableView];
+    
+    //添加遮罩层的时候要放在当前最上面View所以初始化的时候要注意一下(简单的东西搞了好久,这就是没有总结的原因)
     [self setupNav];
+    
+    //下啦刷新
+    [self setRefreshIntableView];
     //初始化数组
     [self initData];
-    //加载城市数据
+    //加在城市数据
     [self laodCityData];
-    //下拉刷新
-    [self setRefreshIntableView];
     
 }
 
@@ -113,19 +123,73 @@
     
 }
 
+
 #pragma mark - 设置tableView
 -(void)setUpTableView{
     self.firstTableView = [UITableView initWithTableView:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-64) withDelegate:self];
-    self.firstTableView.backgroundColor = [UIColor clearColor]
-    ;
+    self.firstTableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.firstTableView];
 }
-
-#pragma mark - 左边按钮
+#pragma mark - 左边的按钮
 -(void)btn_leftBtnClick:(UIButton *)button{
     button.selected = !button.selected;
-    self.selectAddressView.hidden = !self.selectAddressView.hidden;
+    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
 }
+#pragma mark -JFSelectAddressViewTapDelegate
+-(void)removeMaskView{
+    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
+    
+}
+#pragma mark -JFAddressScrollViewButtonDelegate
+-(void)areaButtonClick:(UIButton *)button{
+    JFLog(@"%@", button.currentTitle);
+    [self.leftButton setTitle:button.currentTitle forState:UIControlStateNormal];
+    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
+    
+}
+#pragma mark -JFChangeCityButtonDelegate
+-(void)changeCityButtonClick:(UIButton *)button{
+    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
+    
+    MMHAllCityNameViewController *allCityNameVC = [[MMHAllCityNameViewController alloc]init];
+    [self.navigationController pushViewController:allCityNameVC animated:YES];
+    
+}
+#pragma  mark - JFRushBuyCellDelegate
+-(void)didSelectAtIndexRushBuyCell:(long)index{
+    MMHLog(@"%ld", index);
+    MMHRushBuyWebViewController *rushBuyWebVC = [[MMHRushBuyWebViewController alloc]init];
+    [self.navigationController pushViewController:rushBuyWebVC animated:YES];
+    
+}
+
+#pragma mark - JFDiscountCellDelegate
+-(void)didSelectAtIndexDiscountCell:(NSString *)urlStr{
+    NSString *urlString =  [[GetUrlString sharedManager]urlWithDiscountWebData:urlStr];
+    MMHDiscountWebViewController *disountWebVC = [[MMHDiscountWebViewController alloc]init];
+    disountWebVC.urlStr = urlString;
+    [self.navigationController pushViewController:disountWebVC animated:YES];
+    
+    
+}
+#pragma mark - JFHomeMenuCellDelegate
+-(void)homeMenuCellClick:(long )sender{
+    
+    MMHMenuViewController *menuVC = [[MMHMenuViewController alloc]init];
+    menuVC.titleStr = self.menuArray [sender -10][@"title"];
+    [self.navigationController pushViewController:menuVC animated:YES];
+    
+}
+
+
+
+//#pragma mark -右边的按钮
+//-(void)mapBtnClick{
+//    MMHMapViewController *mapVC = [[MMHMapViewController alloc]init];
+//    [self presentViewController:mapVC animated:YES completion:^{
+//    }];
+//    
+//}
 
 #pragma mark - 设置下啦刷新
 -(void)setRefreshIntableView{
@@ -156,46 +220,33 @@
     
 }
 
-#pragma mark - MMHSelectAddressViewTapDelegate
--(void)removeMaskView{
-    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
-    
-}
-#pragma mark -MMHAddressScrollViewButtonDelegate
--(void)areaButtonClick:(UIButton *)button{
-    JFLog(@"%@", button.currentTitle);
-    [self.leftButton setTitle:button.currentTitle forState:UIControlStateNormal];
-    self.selectAddressView.hidden =  !self.selectAddressView.hidden ;
-    
-}
-#pragma mark - MMHChangeCityButtonDelegate
--(void)changeCityButtonClick:(UIButton *)button{
-    self.selectAddressView.hidden = !self.selectAddressView.hidden;
-    
-    
-}
-
-#pragma mark - MMHRushBuyCellDelegate
-
-
-/*
- * 在刷新数据里面请求 并用GCD开辟另一个线程
+/**
+ *  在刷新数据里面请求  并用GCD开辟另一个线程
  */
-#pragma mark - 这个请求数据在 刷新的适合请求
+#pragma mark - 这个请求数据在刷新的时候请求的
 -(void)refreshData{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
         //1.加载抢购数据
         [self laodRushBuyData];
+        //2.加载热门排队数据
+        [self loadHotQueueData];
+        //3.加载推荐数据
+        [self loadRecommentData];
+        //4.加载折扣数据
+        [self loadDiscountData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //这个里面是主线程要做的事  可以刷新UI
+        });
     });
 }
-
 //1.加载抢购数据
 #pragma mark - 加载抢购数据
 -(void)laodRushBuyData{
     NSString *urlStr = [[GetUrlString sharedManager]urlWithRushBuy];
     [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
+        //        JFLog(@"%@", responseBody);
         NSDictionary *dataDic = [responseBody objectForKey:@"data"];
-        //这个地方用MJ字典转换模型的框架
+        //这个地方用我的偶像MJ的字典转模型的框架
         MMHRushDataModel *rushDataM = [MMHRushDataModel objectWithKeyValues:dataDic];
         [_rushArray removeAllObjects];
         for (int i = 0; i < rushDataM.deals.count; i++) {
@@ -203,12 +254,74 @@
             [_rushArray addObject:deals];
         }
         [self.firstTableView reloadData];
+        
     } failure:^(NSError *error) {
         JFLog(@"%@", error);
         [self.firstTableView.header endRefreshing];
     }];
 }
-
+//2.加载热门排队数据
+#pragma mark -加载热门排队数据
+-(void)loadHotQueueData{
+    NSString *urlStr = [[GetUrlString sharedManager]urlWithHotQueue];
+    [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
+        //JFLog(@"%@", responseBody);
+        NSDictionary *dict = [responseBody objectForKey:@"data"];
+        _hotQueueModel =  [MMHHotQueueModel objectWithKeyValues:dict];
+        [self.firstTableView reloadData];
+    } failure:^(NSError *error) {
+        JFLog(@"%@", error);
+        [self.firstTableView.header endRefreshing];
+        
+    }];
+    
+    
+}
+//3.加载推荐数据
+#pragma mark - 加载推荐数据
+-(void)loadRecommentData{
+    NSString *urlStr = [[GetUrlString sharedManager]urlWithRecomment];
+    [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
+        [_recommentArray removeAllObjects];
+        NSMutableArray *dictArray = [responseBody objectForKey:@"data"];
+        for (int i = 0; i < dictArray.count; i++) {
+            MMHRecommentModel *recommentModel =  [MMHRecommentModel objectWithKeyValues:dictArray[i]];
+            [_recommentArray addObject:recommentModel];
+        }
+        [self.firstTableView reloadData];
+    } failure:^(NSError *error) {
+        JFLog(@"%@", error);
+        [self.firstTableView.header endRefreshing];
+        
+    }];
+    
+    
+}
+//4.加载折扣数据
+#pragma mark - 加载折扣数据
+-(void)loadDiscountData{
+    NSString *urlStr = [[GetUrlString sharedManager]urlWithDiscount];
+    [NetWork sendGetUrl:urlStr withParams:nil success:^(id responseBody) {
+        
+        NSMutableArray *dataDic = [responseBody objectForKey:@"data"];
+        [_discountArray removeAllObjects];
+        for (int i = 0; i < dataDic.count; i++) {
+            MMHDiscountModel *discount = [MMHDiscountModel objectWithKeyValues:dataDic[i]];
+            [_discountArray addObject:discount];
+        }
+        
+        [self.firstTableView reloadData];
+        
+        //这个地方要注意把刷新成功后 的刷新控件移除。不然会有一个小条子不隐藏。
+        [self.firstTableView.header endRefreshing];
+        
+    } failure:^(NSError *error) {
+        JFLog(@"%@", error);
+        [self.firstTableView.header endRefreshing];
+        
+    }];
+    
+}
 #pragma mark - tableView的数据源方法，和代理方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 4) {
@@ -221,13 +334,123 @@
     return 5;
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath.section == 0) {
-//        MMHHomeMenuCell *cell = [MMHHomeMenuCell cellWithTableView:tableView menuArray:self.menuArray];
-//        cell.delegate = self;
-//        return cell;
-//        
-//    }
-//    
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        MMHHomeMenuCell *cell = [MMHHomeMenuCell cellWithTableView:tableView menuArray:self.menuArray];
+        cell.delegate = self;
+        return cell;
+        
+        
+    }else if (indexPath.section == 1){
+        //这个地方按照之前的文章里面说的 控制器提供一个tableView就给你cell，控制器不必知道。cell怎么创建的cell最清楚，不必告诉控制器。
+        MMHRushBuyCell *cell = [MMHRushBuyCell cellWithTableView:tableView];
+        cell.delegate = self;
+        //注意这个地方一定要做异常处理
+        if (_rushArray.count!=0) {
+            //给cell传递模型
+            [cell setRushData:_rushArray];
+        }
+        
+        return cell;
+    }else if (indexPath.section == 2){
+        MMHDiscountCell *cell = [MMHDiscountCell cellWithTableView:tableView];
+        cell.delegate = self;
+        if (_discountArray.count != 0 ) {
+            [cell setDiscountArray:_discountArray];
+        }
+        return cell;
+    }else if (indexPath.section == 3){
+        MMHHotQueueCell *cell = [MMHHotQueueCell cellWithTableView:tableView];
+        if (_hotQueueModel!= nil ) {
+            cell.hotQueueModel = _hotQueueModel;
+        }
+        return cell;
+    }else {
+        if (indexPath.row == 0) {
+            MMHGuessCell *cell = [MMHGuessCell cellWithTableView:tableView];
+            return cell;
+        }
+        else{
+            MMHRecommentCell *cell = [MMHRecommentCell cellWithTableView:tableView];
+            if (_recommentArray.count!=0) {
+                cell.recommentModel = _recommentArray[indexPath.row - 1];
+                
+            }
+            return cell;
+        }
+        
+    }
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 180;
+        
+    }else if (indexPath.section == 1){
+        return 120;
+    }else if (indexPath.section == 2){
+        return 160;
+    }else if (indexPath.section == 3){
+        return 50;
+    }else if(indexPath.section == 4){
+        if (indexPath.row == 0) {
+            return 35.0;
+        }else{
+            return 100.0;
+        }
+    }else{
+        return 70.0;
+    }
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 1;
+    }else{
+        return 5;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 5;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENHEIGHT, 10)];
+    headerView.backgroundColor = RGB(239, 239, 244);
+    return headerView;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 0)];
+    footerView.backgroundColor = RGB(239, 239, 244);
+    return footerView;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section ==3) {
+        NSString *urlStr =  [[GetUrlString sharedManager]urlWithHotQueueWebData];
+        MMHHotQueueViewController *hotQueueVC = [[MMHHotQueueViewController alloc]init];
+        hotQueueVC.urlStr = urlStr;
+        [self.navigationController pushViewController:hotQueueVC animated:YES];
+    }else if(indexPath.section ==4){
+        if (indexPath.row !=0) {
+            MMHRecommentModel *recommendModel = _recommentArray[indexPath.row-1];
+            
+            MMHShopDetailViewController *shopDetailVC = [[MMHShopDetailViewController alloc]init];
+            shopDetailVC.shopID   =[recommendModel.id stringValue];
+            [self.navigationController pushViewController:shopDetailVC animated:YES];
+            
+        }
+    }
+    
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 @end

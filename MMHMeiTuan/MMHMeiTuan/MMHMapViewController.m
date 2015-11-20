@@ -1,32 +1,22 @@
 //
-//  MMHMenuViewController.m
+//  MMHMapViewController.m
 //  MMHMeiTuan
 //
 //  Created by 茆明辉 on 15/11/20.
 //  Copyright © 2015年 com.nyist. All rights reserved.
 //
 
-#import "MMHMenuViewController.h"
+#import "MMHMapViewController.h"
 
-@interface MMHMenuViewController ()
+@interface MMHMapViewController ()
 
 @end
 
-@implementation MMHMenuViewController
+@implementation MMHMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
--(void)initNav{
-    self.title = self.titleStr;
-    UIBarButtonItem *leftItem = [UIBarButtonItem initWithNormalImage:@"back" target:self action:@selector(OnBackBtn) width:23 height:23];
-    self.navigationItem.leftBarButtonItem = leftItem;
-    
-}
--(void)OnBackBtn{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

@@ -2,7 +2,7 @@
 //  MMHMenuViewController.h
 //  MMHMeiTuan
 //
-//  Created by 茆明辉 on 15/10/15.
+//  Created by 茆明辉 on 15/11/20.
 //  Copyright © 2015年 com.nyist. All rights reserved.
 //
 
@@ -10,6 +10,5 @@
 
 @interface MMHMenuViewController : MMHBaseViewController
 
-@property(nonatomic, copy)NSString *titleStr;//浅拷贝
-
+@property (nonatomic, copy)NSString *titleStr;
 @end

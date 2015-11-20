@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MMHShopDatailDataModel;
 @interface MMHShopDetailImageCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *shopDetailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *introduceLabel;
+
++ (instancetype)cellWithTableView:(UITableView *)tableView;
+
+@property(nonatomic, strong)MMHShopDatailDataModel *detailModel;
+
 
 @end

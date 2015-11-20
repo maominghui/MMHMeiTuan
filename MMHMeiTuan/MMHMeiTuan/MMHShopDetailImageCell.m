@@ -7,7 +7,7 @@
 //
 
 #import "MMHShopDetailImageCell.h"
-
+#import "MMHShopDatailDataModel.h"
 @implementation MMHShopDetailImageCell
 
 - (void)awakeFromNib {
@@ -18,6 +18,28 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
++ (instancetype)cellWithTableView:(UITableView *)tableView
+{
+    static NSString *ID = @"JFShopDetailImageCell";
+    MMHShopDetailImageCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        // 从xib中加载cell
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"JFShopDetailImageCell" owner:nil options:nil] lastObject];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+-(void)setDetailModel:(MMHShopDatailDataModel *)detailModel{
+    _detailModel = detailModel;
+    NSString *imgUrl = [detailModel.imgurl stringByReplacingOccurrencesOfString:@"w.h" withString:@"300.0"];
+    //                NSLog(@"店铺图片：%@  %@",imgUrl, _shopInfoM.imgurl);
+    //    [cell.shopImageView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
+    
+    [self.shopDetailImageView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
+    self.shopNameLabel.text = detailModel.mname;
+    self.introduceLabel.text = detailModel.title;
 }
 
 @end
