@@ -447,6 +447,9 @@
     
 }
 
+-(void)openDb:(NSString * )dbName{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

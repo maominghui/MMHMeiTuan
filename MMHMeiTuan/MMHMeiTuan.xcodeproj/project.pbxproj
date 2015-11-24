@@ -53,6 +53,7 @@
 		929B91701BFEEFDE00E3E233 /* MMHRushBuyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929B916F1BFEEFDE00E3E233 /* MMHRushBuyWebViewController.m */; };
 		929B91731BFEEFF700E3E233 /* MMHShopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929B91721BFEEFF700E3E233 /* MMHShopDetailViewController.m */; };
 		929B91781BFF0DF300E3E233 /* MMHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929B91771BFF0DF300E3E233 /* MMHMapViewController.m */; };
+		929B91851C02DD4900E3E233 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929B91841C02DD4900E3E233 /* Reveal.framework */; };
 		92A539AB1BF03B5E00070FB6 /* MMHMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A539A91BF03B5E00070FB6 /* MMHMineHeaderView.m */; };
 		92A539AC1BF03B5E00070FB6 /* MMHMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A539AA1BF03B5E00070FB6 /* MMHMineHeaderView.xib */; };
 		92A539B31BF03B7300070FB6 /* MMHHotQueueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A539AE1BF03B7300070FB6 /* MMHHotQueueCell.m */; };
@@ -1598,6 +1599,7 @@
 		929B91721BFEEFF700E3E233 /* MMHShopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHShopDetailViewController.m; sourceTree = "<group>"; };
 		929B91761BFF0DF300E3E233 /* MMHMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMapViewController.h; sourceTree = "<group>"; };
 		929B91771BFF0DF300E3E233 /* MMHMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMapViewController.m; sourceTree = "<group>"; };
+		929B91841C02DD4900E3E233 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		92A539A81BF03B5E00070FB6 /* MMHMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHMineHeaderView.h; sourceTree = "<group>"; };
 		92A539A91BF03B5E00070FB6 /* MMHMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHMineHeaderView.m; sourceTree = "<group>"; };
 		92A539AA1BF03B5E00070FB6 /* MMHMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHMineHeaderView.xib; sourceTree = "<group>"; };
@@ -3247,6 +3249,7 @@
 				921B8B8D1BD8CD8200DFFFDD /* OpenGLES.framework in Frameworks */,
 				921B8B8B1BD8CD7A00DFFFDD /* QuartzCore.framework in Frameworks */,
 				921B8B891BD8CD7200DFFFDD /* CoreLocation.framework in Frameworks */,
+				929B91851C02DD4900E3E233 /* Reveal.framework in Frameworks */,
 				921B8B871BD8CD6100DFFFDD /* Security.framework in Frameworks */,
 				921B8B851BD8CD5B00DFFFDD /* libiconv.tbd in Frameworks */,
 				921B8B831BD8CD4F00DFFFDD /* SystemConfiguration.framework in Frameworks */,
@@ -3325,6 +3328,8 @@
 		929B91741BFF0DCF00E3E233 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				929B91871C02E19900E3E233 /* View */,
+				929B91861C02E19300E3E233 /* Model */,
 				929B91751BFF0DD900E3E233 /* Controller */,
 			);
 			name = Map;
@@ -3337,6 +3342,20 @@
 				929B91771BFF0DF300E3E233 /* MMHMapViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		929B91861C02E19300E3E233 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		929B91871C02E19900E3E233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		92ABABD11BDA32F600030F81 /* Model */ = {
@@ -3498,6 +3517,7 @@
 		92D871991BCE35CB009D6A1C = {
 			isa = PBXGroup;
 			children = (
+				929B91841C02DD4900E3E233 /* Reveal.framework */,
 				921B8B8C1BD8CD8200DFFFDD /* OpenGLES.framework */,
 				921B8B8A1BD8CD7A00DFFFDD /* QuartzCore.framework */,
 				921B8B881BD8CD7200DFFFDD /* CoreLocation.framework */,
@@ -7846,6 +7866,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)//MMHMeiTuan/MMHPrefixHeader.pch";
 				INFOPLIST_FILE = MMHMeiTuan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -7853,6 +7877,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MMHMeiTuan/Resource/BaiduMap_IOSSDK_v2.6.0_Lib",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -7861,6 +7886,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)//MMHMeiTuan/MMHPrefixHeader.pch";
 				INFOPLIST_FILE = MMHMeiTuan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -7868,6 +7897,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MMHMeiTuan/Resource/BaiduMap_IOSSDK_v2.6.0_Lib",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
